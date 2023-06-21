@@ -13,8 +13,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 BUILD_DEPENDS=	npm-node16>0:www/npm-node16
 
-CONFLICTS=	opensearch-dashboard13
-
 USES=		nodejs:16,build,run python:build
 USE_RC_SUBR=	${PORTNAME}
 
