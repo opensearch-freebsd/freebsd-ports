@@ -520,6 +520,7 @@
     SUBDIR += opensearch
     SUBDIR += opensearch210
     SUBDIR += opensearch-dashboards
+    SUBDIR += opensearch-dashboards210
     SUBDIR += opensearch13
     SUBDIR += opensp
     SUBDIR += openvanilla-framework
