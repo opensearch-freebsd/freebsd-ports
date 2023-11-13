@@ -518,6 +518,7 @@
     SUBDIR += openfts
     SUBDIR += openjade
     SUBDIR += opensearch
+    SUBDIR += opensearch210
     SUBDIR += opensearch-dashboards
     SUBDIR += opensearch13
     SUBDIR += opensp
