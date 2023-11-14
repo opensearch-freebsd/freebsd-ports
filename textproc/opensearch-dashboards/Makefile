@@ -5,7 +5,7 @@ CATEGORIES=	textproc www
 MASTER_SITES=	https://artifacts.opensearch.org/releases/bundle/${PORTNAME}/${DISTVERSION}/
 
 MAINTAINER=	opensearch@FreeBSD.org
-COMMENT=	Visualization dashboards for OpenSearch
+COMMENT?=	Visualization dashboards for OpenSearch
 WWW=		https://opensearch.org
 
 LICENSE=	APACHE20
