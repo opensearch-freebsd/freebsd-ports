@@ -15,7 +15,7 @@ BUILD_DEPENDS=	jna>0:devel/jna
 RUN_DEPENDS=	bash>0:shells/bash \
 		jna>0:devel/jna
 
-CONFLICTS=	opensearch13
+CONFLICTS=	opensearch13 opensearch
 
 USES=		cpe shebangfix
 USE_JAVA=	yes
