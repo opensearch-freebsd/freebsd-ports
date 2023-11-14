@@ -1,11 +1,11 @@
 PORTNAME=	opensearch
-DISTVERSION=	2.11.0
+DISTVERSION?=	2.11.0
 DISTVERSIONSUFFIX=	-linux-x64
 CATEGORIES=	textproc java devel
 MASTER_SITES=	https://artifacts.opensearch.org/releases/bundle/${PORTNAME}/${DISTVERSION}/
 
 MAINTAINER=	opensearch@FreeBSD.org
-COMMENT=	Full-text search engine for Java
+COMMENT?=	Full-text search engine for Java
 WWW=		https://opensearch.org
 
 LICENSE=	APACHE20
@@ -14,7 +14,7 @@ BUILD_DEPENDS=	jna>0:devel/jna
 RUN_DEPENDS=	bash>0:shells/bash \
 		jna>0:devel/jna
 
-CONFLICTS=	opensearch13 opensearch210
+CONFLICTS?=	opensearch13 opensearch210
 
 USES=		cpe shebangfix
 USE_JAVA=	yes
