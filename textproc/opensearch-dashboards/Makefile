@@ -11,6 +11,8 @@ WWW=		https://opensearch.org
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
+CONFLICTS=	opensearch-dashboards210
+
 BUILD_DEPENDS=	npm-node18>0:www/npm-node18
 
 USES=		nodejs:18,build,run python:build
