@@ -18,12 +18,12 @@ BUILD_DEPENDS=	npm-node18>0:www/npm-node18
 USES=		nodejs:18,build,run python:build
 USE_RC_SUBR=	${PORTNAME}
 
+SUB_FILES=	pkg-deinstall
+SUB_LIST=	PORTNAME="${PORTNAME}" \
+		PKGNAMESUFFIX="${PKGNAMESUFFIX}" \
+		WWWDIR=${WWWDIR}
+
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-
-OPTIONS_DEFINE=	CHROME
-
-CHROME_DESC=	Add dependency on www/chromium (required for PDF reports)
-CHROME_RUN_DEPENDS=chrome:www/chromium
 
 NODE_VER=	18.18.0
 NO_BUILD=	yes
