@@ -1,0 +1,6 @@
+!!! This port is under development. Please consider it experimental. !!!
+
+Data Prepper needs pipelines to be configured in
+/usr/local/lib/data-prepper/pipelines
+
+Examples can be found in /usr/local/lib/data-prepper/examples
