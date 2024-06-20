@@ -668,6 +668,7 @@
     SUBDIR += onednn
     SUBDIR += onednn252
     SUBDIR += openblas
+    SUBDIR += openblas64
     SUBDIR += openfst
     SUBDIR += openfst-vosk
     SUBDIR += openlibm
@@ -913,6 +914,7 @@
     SUBDIR += py-bottleneck
     SUBDIR += py-brial
     SUBDIR += py-chaospy
+    SUBDIR += py-clarabel
     SUBDIR += py-claripy
     SUBDIR += py-clingcon
     SUBDIR += py-clingo
@@ -928,6 +930,7 @@
     SUBDIR += py-cypari2
     SUBDIR += py-deap
     SUBDIR += py-dgl
+    SUBDIR += py-diffcp
     SUBDIR += py-dionysus
     SUBDIR += py-disjoint-set
     SUBDIR += py-docplex
@@ -1006,7 +1009,6 @@
     SUBDIR += py-numpy-stl
     SUBDIR += py-openTSNE
     SUBDIR += py-opt-einsum
-    SUBDIR += py-optuna
     SUBDIR += py-or-tools
     SUBDIR += py-osqp
     SUBDIR += py-pandas
@@ -1143,6 +1145,7 @@
     SUBDIR += scalapackfx
     SUBDIR += scilab
     SUBDIR += scilab-toolbox-swt
+    SUBDIR += scipoptsuite
     SUBDIR += scorec-core
     SUBDIR += scs
     SUBDIR += sdpa

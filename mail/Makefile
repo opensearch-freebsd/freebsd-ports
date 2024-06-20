@@ -187,6 +187,7 @@
     SUBDIR += libsrs2
     SUBDIR += libsrs_alt
     SUBDIR += libvmime
+    SUBDIR += linux-r7-organizer-pro
     SUBDIR += listadmin
     SUBDIR += lmtp2nntp
     SUBDIR += lookout
@@ -271,6 +272,7 @@
     SUBDIR += nullmailer
     SUBDIR += openarc
     SUBDIR += opendkim
+    SUBDIR += opendkim-devel
     SUBDIR += opendmarc
     SUBDIR += opensmtpd
     SUBDIR += opensmtpd-extras

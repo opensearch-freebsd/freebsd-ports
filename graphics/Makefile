@@ -154,6 +154,7 @@
     SUBDIR += dspdfviewer
     SUBDIR += dssim
     SUBDIR += duhdraw
+    SUBDIR += durdraw
     SUBDIR += dust3d
     SUBDIR += dynamechs
     SUBDIR += ebsynth
@@ -161,7 +162,6 @@
     SUBDIR += egl-wayland
     SUBDIR += eglexternalplatform
     SUBDIR += elastix
-    SUBDIR += electricsheep
     SUBDIR += elementary-photos
     SUBDIR += embree
     SUBDIR += enblend
@@ -1152,6 +1152,7 @@
     SUBDIR += svg2png
     SUBDIR += svgalib
     SUBDIR += svgbob
+    SUBDIR += svgpp
     SUBDIR += swappy
     SUBDIR += swfmill
     SUBDIR += swftools

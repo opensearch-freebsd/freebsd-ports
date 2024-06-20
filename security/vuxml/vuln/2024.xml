@@ -1,3 +1,398 @@
+  <vuln vid="142c538e-b18f-40a1-afac-c479effadd5c">
+    <topic>openvpn -- two security fixes</topic>
+    <affects>
+      <package>
+	<name>openvpn</name>
+	<range><lt>2.6.11</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gert Doering reports that OpenVPN 2.6.11 fixes two security bugs (three on Windows):</p>
+	<blockquote cite="https://github.com/OpenVPN/openvpn/blob/v2.6.11/Changes.rst#security-fixes">
+	  <p>CVE-2024-5594: control channel: refuse control channel messages with nonprintable characters in them. Security scope: a malicious openvpn peer can send garbage to openvpn log, or cause high CPU load. (Reynir Björnsson)</p>
+	  <p>CVE-2024-28882: only call schedule_exit() once (on a given peer). Security scope: an authenticated client can make the server "keep the session" even when the server has been told to disconnect this client. (Reynir Björnsson)</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-5594</cvename>
+      <cvename>CVE-2024-28882</cvename>
+      <url>https://github.com/OpenVPN/openvpn/blob/v2.6.11/Changes.rst#security-fixes</url>
+    </references>
+    <dates>
+      <discovery>2024-05-16</discovery>
+      <entry>2024-06-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="007e7e77-2f06-11ef-8a0f-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>126.0.6478.114</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>126.0.6478.114</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop_18.html">
+	 <p>This update includes 6 security fixes:</p>
+	 <ul>
+	    <li>[344608204] High CVE-2024-6100: Type Confusion in V8. Reported by Seunghyun Lee (@0x10n) participating in SSD Secure Disclosure's TyphoonPWN 2024 on 2024-06-04</li>
+	    <li>[343748812] High CVE-2024-6101: Inappropriate implementation in WebAssembly. Reported by @ginggilBesel on 2024-05-31</li>
+	    <li>[339169163] High CVE-2024-6102: Out of bounds memory access in Dawn. Reported by wgslfuzz on 2024-05-07</li>
+	    <li>[344639860] High CVE-2024-6103: Use after free in Dawn. Reported by wgslfuzz on 2024-06-04</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-6100</cvename>
+      <cvename>CVE-2024-6101</cvename>
+      <cvename>CVE-2024-6102</cvename>
+      <cvename>CVE-2024-6103</cvename>
+      <url>https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop_18.html</url>
+    </references>
+    <dates>
+      <discovery>2024-06-18</discovery>
+      <entry>2024-06-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="453aa0fc-2d91-11ef-8a0f-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>126.0.6478.54</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>126.0.6478.54</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop.html">
+	 <p>This update includes 21 security fixes:</p>
+	 <ul>
+	    <li>[342456991] High CVE-2024-5830: Type Confusion in V8. Reported by Man Yue Mo of GitHub Security Lab on 2024-05-24</li>
+	    <li>[339171223] High CVE-2024-5831: Use after free in Dawn. Reported by wgslfuzz on 2024-05-07</li>
+	    <li>[340196361] High CVE-2024-5832: Use after free in Dawn. Reported by wgslfuzz on 2024-05-13</li>
+	    <li>[342602616] High CVE-2024-5833: Type Confusion in V8. Reported by @ginggilBesel on 2024-05-24</li>
+	    <li>[342840932] High CVE-2024-5834: Inappropriate implementation in Dawn. Reported by gelatin dessert on 2024-05-26</li>
+	    <li>[341991535] High CVE-2024-5835: Heap buffer overflow in Tab Groups. Reported by Weipeng Jiang (@Krace) of VRI on 2024-05-22</li>
+	    <li>[341875171] High CVE-2024-5836: Inappropriate Implementation in DevTools. Reported by Allen Ding on 2024-05-21</li>
+	    <li>[342415789] High CVE-2024-5837: Type Confusion in V8. Reported by Anonymous on 2024-05-23</li>
+	    <li>[342522151] High CVE-2024-5838: Type Confusion in V8. Reported by Zhenghang Xiao (@Kipreyyy) on 2024-05-24</li>
+	    <li>[340122160] Medium CVE-2024-5839: Inappropriate Implementation in Memory Allocator. Reported by Micky on 2024-05-13</li>
+	    <li>[41492103] Medium CVE-2024-5840: Policy Bypass in CORS. Reported by Matt Howard on 2024-01-17</li>
+	    <li>[326765855] Medium CVE-2024-5841: Use after free in V8. Reported by Cassidy Kim(@cassidy6564) on 2024-02-26</li>
+	    <li>[40062622] Medium CVE-2024-5842: Use after free in Browser UI. Reported by Sven Dysthe (@svn_dy) on 2023-01-12</li>
+	    <li>[333940412] Medium CVE-2024-5843: Inappropriate implementation in Downloads. Reported by hjy79425575 on 2024-04-12</li>
+	    <li>[331960660] Medium CVE-2024-5844: Heap buffer overflow in Tab Strip. Reported by Sri on 2024-04-01</li>
+	    <li>[340178596] Medium CVE-2024-5845: Use after free in Audio. Reported by anonymous on 2024-05-13</li>
+	    <li>[341095523] Medium CVE-2024-5846: Use after free in PDFium. Reported by Han Zheng (HexHive) on 2024-05-16</li>
+	    <li>[341313077] Medium CVE-2024-5847: Use after free in PDFium. Reported by Han Zheng (HexHive) on 2024-05-18</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-5830</cvename>
+      <cvename>CVE-2024-5831</cvename>
+      <cvename>CVE-2024-5832</cvename>
+      <cvename>CVE-2024-5833</cvename>
+      <cvename>CVE-2024-5834</cvename>
+      <cvename>CVE-2024-5835</cvename>
+      <cvename>CVE-2024-5836</cvename>
+      <cvename>CVE-2024-5837</cvename>
+      <cvename>CVE-2024-5838</cvename>
+      <cvename>CVE-2024-5839</cvename>
+      <cvename>CVE-2024-5840</cvename>
+      <cvename>CVE-2024-5841</cvename>
+      <cvename>CVE-2024-5842</cvename>
+      <cvename>CVE-2024-5843</cvename>
+      <cvename>CVE-2024-5844</cvename>
+      <cvename>CVE-2024-5845</cvename>
+      <cvename>CVE-2024-5846</cvename>
+      <cvename>CVE-2024-5847</cvename>
+      <url>https://chromereleases.googleblog.com/2024/06/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2024-06-11</discovery>
+      <entry>2024-06-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f0ba7008-2bbd-11ef-b4ca-814a3d504243">
+    <topic>forgejo -- multiple issues</topic>
+    <affects>
+      <package>
+	<name>forgejo</name>
+	<range><lt>7.0.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The forgejo team reports:</p>
+	<blockquote cite="https://codeberg.org/forgejo/forgejo/src/branch/forgejo/RELEASE-NOTES.md#7-0-4">
+	<p><a href="https://pkg.go.dev/vuln/GO-2024-2888">CVE-2024-24789</a>:
+	The archive/zip package's handling of certain types of invalid
+	zip files differs from the behavior of most zip implementations.
+	This misalignment could be exploited to create an zip file with
+	contents that vary depending on the implementation reading the
+	file.</p>
+	<p>The OAuth2 implementation does not always require authentication
+	for public clients, a requirement of RFC 6749 Section 10.2. A
+	malicious client can impersonate another client and obtain access
+	to protected resources if the impersonated client fails to, or is
+	unable to, keep its client credentials confidential.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-24789</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-24789</url>
+    </references>
+    <dates>
+      <discovery>2024-04-04</discovery>
+      <entry>2024-04-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="219aaa1e-2aff-11ef-ab37-5404a68ad561">
+    <topic>traefik -- Unexpected behavior with IPv4-mapped IPv6 addresses</topic>
+    <affects>
+      <package>
+	<name>traefik</name>
+	<range><lt>2.11.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The traefik authors report:</p>
+	<blockquote cite="https://github.com/traefik/traefik/security/advisories/GHSA-7jmw-8259-q9jx">
+	  <p>There is a vulnerability in Go managing various Is methods
+	     (IsPrivate, IsLoopback, etc) for IPv4-mapped IPv6 addresses.
+	     They didn't work as expected returning false for addresses
+	     which would return true in their traditional IPv4 forms.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-24790</cvename>
+      <url>https://github.com/traefik/traefik/security/advisories/GHSA-7jmw-8259-q9jx</url>
+    </references>
+    <dates>
+      <discovery>2024-06-05</discovery>
+       <entry>2024-06-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a5c64f6f-2af3-11ef-a77e-901b0e9408dc">
+    <topic>go -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>go122</name>
+	<range><lt>1.22.4</lt></range>
+      </package>
+      <package>
+	<name>go121</name>
+	<range><lt>1.21.11</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports:</p>
+	<blockquote cite="https://go.dev/issue/66869">
+	  <p>archive/zip: mishandling of corrupt central directory record</p>
+	  <p>The archive/zip package's handling of certain types of
+	  invalid zip files differed from the behavior of most zip
+	  implementations. This misalignment could be exploited to
+	  create an zip file with contents that vary depending on the
+	  implementation reading the file. The archive/zip package now
+	  rejects files containing these errors.</p>
+	</blockquote>
+	<blockquote cite="https://go.dev/issue/67680">
+	  <p>net/netip: unexpected behavior from Is methods for
+	  IPv4-mapped IPv6 addresses</p>
+	  <p>The various Is methods (IsPrivate, IsLoopback, etc) did
+	  not work as expected for IPv4-mapped IPv6 addresses,
+	  returning false for addresses which would return true in
+	  their traditional IPv4 forms.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-24789</cvename>
+      <cvename>CVE-2024-24790</cvename>
+      <url>https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ</url>
+    </references>
+    <dates>
+      <discovery>2024-06-04</discovery>
+      <entry>2024-06-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="92cd1c03-2940-11ef-bc02-001b217b3468">
+    <topic>Gitlab -- Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>17.0.0</ge><lt>17.0.2</lt></range>
+	<range><ge>16.11.0</ge><lt>16.11.4</lt></range>
+	<range><ge>5.1</ge><lt>16.10.7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2024/06/12/patch-release-gitlab-17-0-2-released/">
+	  <p>ReDoS in gomod dependency linker</p>
+	  <p>ReDoS in CI interpolation (fix bypass)</p>
+	  <p>ReDoS in Asana integration issue mapping when webhook is called</p>
+	  <p>XSS and content injection when viewing raw XHTML files on iOS devices</p>
+	  <p>Missing agentk request validation could cause KAS to panic</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-1495</cvename>
+      <cvename>CVE-2024-1736</cvename>
+      <cvename>CVE-2024-1963</cvename>
+      <cvename>CVE-2024-4201</cvename>
+      <cvename>CVE-2024-5469</cvename>
+      <url>https://about.gitlab.com/releases/2024/06/12/patch-release-gitlab-17-0-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2024-06-12</discovery>
+      <entry>2024-06-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="479df73e-2838-11ef-9cab-4ccc6adda413">
+    <topic>plasma[56]-plasma-workspace -- Unauthorized users can access session manager</topic>
+    <affects>
+      <package>
+	<name>plasma5-plasma-workspace</name>
+	<range><lt>5.27.11.1</lt></range>
+      </package>
+      <package>
+	<name>plasma6-plasma-workspace</name>
+	<range><lt>6.0.4_2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>David Edmundson reports:</p>
+	<blockquote cite="https://kde.org/info/security/advisory-20240531-1.txt">
+	  <p>KSmserver, KDE's XSMP manager, incorrectly allows connections via ICE
+	    based purely on the host, allowing all local connections. This allows
+	    another user on the same machine to gain access to the session
+	    manager.</p>
+	  <p>A well crafted client could use the session restore feature to execute
+	    arbitrary code as the user on the next boot.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-36041</cvename>
+      <url>https://kde.org/info/security/advisory-20240531-1.txt</url>
+    </references>
+    <dates>
+      <discovery>2024-05-31</discovery>
+      <entry>2024-06-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5f608c68-276c-11ef-8caa-0897988a1c07">
+    <topic>Composer -- Multiple command injections via malicious git/hg branch names</topic>
+    <affects>
+      <package>
+	<name>php81-composer</name>
+	<range><lt>2.7.7</lt></range>
+      </package>
+      <package>
+	<name>php82-composer</name>
+	<range><lt>2.7.7</lt></range>
+      </package>
+      <package>
+	<name>php83-composer</name>
+	<range><lt>2.7.7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Composer project reports:</p>
+	<blockquote cite="https://github.com/composer/composer/security/advisories/GHSA-47f6-5gq3-vx9c">
+	  <p>The status, reinstall and remove commands with packages
+	  installed from source via git containing specially crafted
+	  branch names in the repository can be used to execute
+	  code.</p>
+	</blockquote>
+	<blockquote cite="https://github.com/composer/composer/security/advisories/GHSA-v9qv-c7wm-wgmf">
+	  <p>The composer install command running inside a git/hg
+	  repository which has specially crafted branch names can
+	  lead to command injection. So this requires cloning
+	  untrusted repositories.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-35241</cvename>
+      <url>https://github.com/composer/composer/security/advisories/GHSA-47f6-5gq3-vx9c</url>
+      <cvename>CVE-2024-35242</cvename>
+      <url>https://github.com/composer/composer/security/advisories/GHSA-v9qv-c7wm-wgmf</url>
+    </references>
+    <dates>
+      <discovery>2024-06-10</discovery>
+      <entry>2024-06-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="91929399-249e-11ef-9296-b42e991fc52e">
+    <topic>kanboard -- Project Takeover via IDOR in ProjectPermissionController</topic>
+    <affects>
+      <package>
+	<name>kanboard</name>
+	<range><lt>1.2.37</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/kanboard/kanboard/commit/b6703688aac8187f5ea4d4d704fc7afeeffeafa7">
+	  <p>Kanboard is project management software that focuses on the Kanban
+	methodology.  The vuln is in app/Controller/ProjectPermissionController.php
+	function addUser().  The users permission to add users to a project
+	only get checked on the URL parameter project_id.  If the user is
+	authorized to add users to this project the request gets processed.
+	The users permission for the POST BODY parameter project_id does
+	not get checked again while processing.  An attacker with the
+	&apos;Project Manager&apos; on a single project may take over any
+	other project.  The vulnerability is fixed in 1.2.37.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-36399</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-36399</url>
+    </references>
+    <dates>
+      <discovery>2024-06-06</discovery>
+      <entry>2024-06-07</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="14908bda-232b-11ef-b621-00155d645102">
     <topic>cyrus-imapd -- unbounded memory allocation</topic>
     <affects>
@@ -86,11 +481,15 @@
   </vuln>
 
   <vuln vid="320a19f7-1ddd-11ef-a2ae-8c164567ca3c">
-    <topic>nginx-devel -- Multiple Vulnerabilities in HTTP/3</topic>
+    <topic>nginx -- Multiple Vulnerabilities in HTTP/3</topic>
     <affects>
       <package>
 	<name>nginx-devel</name>
 	<range><ge>1.25.0</ge><lt>1.27.0</lt></range>
+      </package>
+      <package>
+	<name>nginx</name>
+	<range><ge>1.26.0</ge><lt>1.26.1</lt></range>
       </package>
     </affects>
     <description>
