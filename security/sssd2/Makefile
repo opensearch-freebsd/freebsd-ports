@@ -1,6 +1,6 @@
 PORTNAME=	sssd
-PORTVERSION=	2.9.4
-PORTREVISION=	5
+PORTVERSION=	2.9.5
+PORTREVISION=	1
 CATEGORIES=	security
 PKGNAMESUFFIX=	2
 
@@ -13,7 +13,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS_INSTALL?=	sssd*
 
-BUILD_DEPENDS=	bash:shells/bash \
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
+		bash:shells/bash \
 		docbook-xsl>=1:textproc/docbook-xsl \
 		krb5>=1.20:security/krb5 \
 		p11-kit:security/p11-kit \
@@ -34,7 +35,7 @@ LIB_DEPENDS=	libcares.so:dns/c-ares \
 		libjansson.so:devel/jansson \
 		libjose.so:net/jose \
 		libkrb5.so:security/krb5 \
-		libldb.so:databases/ldb22 \
+		libldb.so:databases/ldb25 \
 		libndr-krb5pac.so:net/samba416 \
 		libndr-nbt.so:net/samba416 \
 		libndr-standard.so:net/samba416 \

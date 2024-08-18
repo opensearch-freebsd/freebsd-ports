@@ -27,6 +27,7 @@
     SUBDIR += bgs
     SUBDIR += bitmap
     SUBDIR += bmpanel2
+    SUBDIR += boomer
     SUBDIR += brisk-menu
     SUBDIR += budgie
     SUBDIR += budgie-desktop
@@ -523,6 +524,7 @@
     SUBDIR += xcb-util-renderutil
     SUBDIR += xcb-util-wm
     SUBDIR += xcb-util-xrm
+    SUBDIR += xclicker
     SUBDIR += xclickroot
     SUBDIR += xclip
     SUBDIR += xclipboard

@@ -5,14 +5,15 @@ CATEGORIES=	net
 MASTER_SITES=	https://releases.pagure.org/freeipa/
 DISTNAME=	freeipa-${DISTVERSION}
 
-MAINTAINER=	xavier.beaudouin@klarasystems.com
+MAINTAINER=	kiwi@oav.net
 COMMENT=	FreeIPA Client tools
 WWW=		https://www.freeipa.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR}
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
+		${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR}
 
 LIB_DEPENDS=	libcmocka.so:sysutils/cmocka \
 		libcurl.so:ftp/curl \

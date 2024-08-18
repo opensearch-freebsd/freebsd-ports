@@ -1,6 +1,6 @@
 PORTNAME=	quary
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.0
+DISTVERSION=	0.3.2
 CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -52,6 +52,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		async-stream-impl-0.3.5 \
 		async-trait-0.1.80 \
 		atoi-2.0.0 \
+		atomic-waker-1.1.2 \
 		autocfg-1.3.0 \
 		backtrace-0.3.73 \
 		base64-0.21.7 \
@@ -119,7 +120,6 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		digest-0.10.7 \
 		dirs-5.0.1 \
 		dirs-sys-0.4.1 \
-		displaydoc-0.2.4 \
 		doc-comment-0.3.3 \
 		docker_credential-1.3.1 \
 		dotenv-0.15.0 \
@@ -130,6 +130,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		either-1.12.0 \
 		encode_unicode-0.3.6 \
 		encoding_rs-0.8.34 \
+		enum-as-inner-0.6.0 \
 		equivalent-1.0.1 \
 		errno-0.3.9 \
 		etcetera-0.8.0 \
@@ -143,6 +144,8 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		flate2-1.0.30 \
 		flume-0.11.0 \
 		fnv-1.0.7 \
+		foreign-types-0.3.2 \
+		foreign-types-shared-0.1.1 \
 		form_urlencoded-1.2.1 \
 		fragile-2.0.0 \
 		funty-2.0.0 \
@@ -165,6 +168,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		google-cloud-metadata-0.5.0 \
 		google-cloud-token-0.1.2 \
 		h2-0.3.26 \
+		h2-0.4.5 \
 		half-2.4.1 \
 		hashbrown-0.12.3 \
 		hashbrown-0.14.5 \
@@ -173,6 +177,8 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		heck-0.5.0 \
 		hermit-abi-0.3.9 \
 		hex-0.4.3 \
+		hickory-proto-0.24.1 \
+		hickory-resolver-0.24.1 \
 		hkdf-0.12.4 \
 		hmac-0.12.1 \
 		home-0.5.9 \
@@ -182,7 +188,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		http-body-0.4.6 \
 		http-body-1.0.0 \
 		http-body-util-0.1.2 \
-		httparse-1.9.3 \
+		httparse-1.9.4 \
 		httpdate-1.0.3 \
 		humantime-2.1.0 \
 		hyper-0.14.29 \
@@ -191,26 +197,20 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		hyper-rustls-0.24.2 \
 		hyper-rustls-0.25.0 \
 		hyper-rustls-0.26.0 \
+		hyper-rustls-0.27.2 \
+		hyper-tls-0.6.0 \
 		hyper-util-0.1.5 \
 		hyperlocal-next-0.9.0 \
 		iana-time-zone-0.1.60 \
 		iana-time-zone-haiku-0.1.2 \
-		icu_collections-1.5.0 \
-		icu_locid-1.5.0 \
-		icu_locid_transform-1.5.0 \
-		icu_locid_transform_data-1.5.0 \
-		icu_normalizer-1.5.0 \
-		icu_normalizer_data-1.5.0 \
-		icu_properties-1.5.0 \
-		icu_properties_data-1.5.0 \
-		icu_provider-1.5.0 \
-		icu_provider_macros-1.5.0 \
 		ident_case-1.0.1 \
-		idna-1.0.0 \
+		idna-0.4.0 \
+		idna-0.5.0 \
 		indexmap-1.9.3 \
 		indexmap-2.2.6 \
 		indicatif-0.17.8 \
 		instant-0.1.13 \
+		ipconfig-0.3.2 \
 		ipnet-2.9.0 \
 		is_terminal_polyfill-1.70.0 \
 		itertools-0.11.0 \
@@ -219,7 +219,7 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		jobserver-0.1.31 \
 		js-sys-0.3.69 \
 		jsonwebtoken-9.3.0 \
-		lazy_static-1.4.0 \
+		lazy_static-1.5.0 \
 		lexical-core-0.8.5 \
 		lexical-parse-float-0.8.5 \
 		lexical-parse-integer-0.8.6 \
@@ -231,22 +231,24 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		libm-0.2.8 \
 		libredox-0.1.3 \
 		libsqlite3-sys-0.27.0 \
+		linked-hash-map-0.5.6 \
 		linux-raw-sys-0.4.14 \
-		litemap-0.7.3 \
 		lock_api-0.4.12 \
 		log-0.4.21 \
+		lru-cache-0.1.2 \
 		lz4-1.25.0 \
 		lz4-sys-1.9.5 \
 		match_cfg-0.1.0 \
 		md-5-0.10.6 \
-		memchr-2.7.3 \
+		memchr-2.7.4 \
 		mime-0.3.17 \
 		minimal-lexical-0.2.1 \
-		miniz_oxide-0.7.3 \
+		miniz_oxide-0.7.4 \
 		mio-0.8.11 \
 		mockall-0.12.1 \
 		mockall_derive-0.12.1 \
 		multimap-0.10.0 \
+		native-tls-0.2.12 \
 		nom-7.1.3 \
 		num-0.4.3 \
 		num-bigint-0.4.5 \
@@ -263,7 +265,10 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		object-0.36.0 \
 		object_store-0.9.1 \
 		once_cell-1.19.0 \
+		openssl-0.10.64 \
+		openssl-macros-0.1.1 \
 		openssl-probe-0.1.5 \
+		openssl-sys-0.9.102 \
 		option-ext-0.2.0 \
 		parking_lot-0.11.2 \
 		parking_lot-0.12.3 \
@@ -301,14 +306,18 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		proc-macro-crate-3.1.0 \
 		proc-macro-error-1.0.4 \
 		proc-macro-error-attr-1.0.4 \
-		proc-macro2-1.0.85 \
+		proc-macro2-1.0.86 \
 		prost-0.12.6 \
 		prost-build-0.12.6 \
 		prost-derive-0.12.6 \
 		prost-types-0.12.6 \
 		ptr_meta-0.1.4 \
 		ptr_meta_derive-0.1.4 \
+		quick-error-1.2.3 \
 		quick-xml-0.31.0 \
+		quinn-0.11.2 \
+		quinn-proto-0.11.3 \
+		quinn-udp-0.5.2 \
 		quote-1.0.36 \
 		radium-0.7.0 \
 		rand-0.8.5 \
@@ -316,16 +325,17 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		rand_core-0.6.4 \
 		redox_syscall-0.2.16 \
 		redox_syscall-0.4.1 \
-		redox_syscall-0.5.1 \
+		redox_syscall-0.5.2 \
 		redox_users-0.4.5 \
 		regex-1.10.5 \
 		regex-automata-0.4.7 \
 		regex-syntax-0.8.4 \
 		rend-0.4.2 \
 		reqwest-0.11.27 \
-		reqwest-0.12.4 \
+		reqwest-0.12.5 \
 		reqwest-middleware-0.3.1 \
 		reqwest-retry-0.5.0 \
+		resolv-conf-0.7.0 \
 		retry-policies-0.3.0 \
 		ring-0.17.8 \
 		rkyv-0.7.44 \
@@ -336,10 +346,12 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		rust-embed-utils-8.4.0 \
 		rust_decimal-1.35.0 \
 		rustc-demangle-0.1.24 \
+		rustc-hash-1.1.0 \
 		rustc_version-0.4.0 \
 		rustix-0.38.34 \
 		rustls-0.21.12 \
 		rustls-0.22.4 \
+		rustls-0.23.10 \
 		rustls-native-certs-0.6.3 \
 		rustls-native-certs-0.7.0 \
 		rustls-pemfile-1.0.4 \
@@ -381,7 +393,6 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		snowflake-api-0.8.1 \
 		snowflake-jwt-0.3.1 \
 		socket2-0.5.7 \
-		spin-0.5.2 \
 		spin-0.9.8 \
 		spki-0.7.3 \
 		sqlformat-0.2.4 \
@@ -393,7 +404,6 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		sqlx-mysql-0.7.4 \
 		sqlx-postgres-0.7.4 \
 		sqlx-sqlite-0.7.4 \
-		stable_deref_trait-1.2.0 \
 		static_assertions-1.1.0 \
 		stringprep-0.1.5 \
 		strsim-0.11.1 \
@@ -403,32 +413,34 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		strum-0.26.2 \
 		strum_macros-0.25.3 \
 		strum_macros-0.26.4 \
-		subtle-2.5.0 \
+		subtle-2.6.0 \
 		syn-1.0.109 \
-		syn-2.0.66 \
+		syn-2.0.67 \
 		syn_derive-0.1.8 \
 		sync_wrapper-0.1.2 \
-		synstructure-0.13.1 \
+		sync_wrapper-1.0.1 \
 		system-configuration-0.5.1 \
 		system-configuration-sys-0.5.0 \
 		tap-1.0.1 \
 		tar-0.4.41 \
 		tempfile-3.10.1 \
 		termtree-0.4.1 \
-		testcontainers-0.17.0 \
+		testcontainers-0.18.0 \
+		testcontainers-modules-0.6.1 \
 		thiserror-1.0.61 \
 		thiserror-impl-1.0.61 \
 		time-0.3.36 \
 		time-core-0.1.2 \
 		time-macros-0.2.18 \
 		tiny-keccak-2.0.2 \
-		tinystr-0.7.6 \
 		tinyvec-1.6.0 \
 		tinyvec_macros-0.1.1 \
 		tokio-1.38.0 \
 		tokio-macros-2.3.0 \
+		tokio-native-tls-0.3.1 \
 		tokio-rustls-0.24.1 \
 		tokio-rustls-0.25.0 \
+		tokio-rustls-0.26.0 \
 		tokio-stream-0.1.15 \
 		tokio-util-0.7.11 \
 		toml_datetime-0.6.6 \
@@ -450,10 +462,8 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		unicode_categories-0.1.1 \
 		unsafe-libyaml-0.2.11 \
 		untrusted-0.9.0 \
-		url-2.5.1 \
+		url-2.5.2 \
 		urlencoding-2.1.3 \
-		utf16_iter-1.0.5 \
-		utf8_iter-1.0.4 \
 		utf8parse-0.2.2 \
 		uuid-1.8.0 \
 		vcpkg-0.2.15 \
@@ -475,8 +485,9 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		wasm-timer-0.2.5 \
 		web-sys-0.3.69 \
 		webpki-roots-0.25.4 \
-		webpki-roots-0.26.2 \
+		webpki-roots-0.26.3 \
 		whoami-1.5.1 \
+		widestring-1.1.0 \
 		winapi-0.3.9 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
 		winapi-util-0.1.8 \
@@ -504,23 +515,21 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		winnow-0.5.40 \
 		winreg-0.50.0 \
 		winreg-0.52.0 \
-		write16-1.0.0 \
-		writeable-0.5.5 \
 		wyz-0.5.1 \
 		xattr-1.3.1 \
-		yoke-0.7.4 \
-		yoke-derive-0.7.4 \
 		yup-oauth2-9.0.0 \
 		zerocopy-0.7.34 \
 		zerocopy-derive-0.7.34 \
-		zerofrom-0.1.4 \
-		zerofrom-derive-0.1.4 \
-		zeroize-1.8.1 \
-		zerovec-0.10.2 \
-		zerovec-derive-0.10.2 \
-		testcontainers-modules@git+https://github.com/testcontainers/testcontainers-rs-modules-community\#edf3c6e940521be56edb17b4c74477f5b6a1fada
+		zeroize-1.8.1
 
 PLIST_FILES=	bin/${PORTNAME}
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc
+LIB_DEPENDS+=	libatomic.so:lang/gcc${GCC_DEFAULT}
+LDFLAGS+=	-L/usr/local/lib/gcc${GCC_DEFAULT} -latomic
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} \
