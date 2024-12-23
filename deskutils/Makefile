@@ -43,6 +43,7 @@
     SUBDIR += coregarage
     SUBDIR += countdown
     SUBDIR += dailystrips
+    SUBDIR += deforaos-notes
     SUBDIR += deforaos-todo
     SUBDIR += dfshow
     SUBDIR += dmenu-wayland
@@ -61,6 +62,7 @@
     SUBDIR += freebsd-update-notify
     SUBDIR += freemind
     SUBDIR += freeplane
+    SUBDIR += fyi
     SUBDIR += ganttproject
     SUBDIR += gcal
     SUBDIR += gcalcli
@@ -161,6 +163,7 @@
     SUBDIR += libportal-gtk3
     SUBDIR += libportal-gtk4
     SUBDIR += libportal-qt5
+    SUBDIR += libportal-qt6
     SUBDIR += ljclive
     SUBDIR += lumina-archiver
     SUBDIR += lumina-calculator

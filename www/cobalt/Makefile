@@ -1,12 +1,14 @@
 PORTNAME=	cobalt
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.19.6
+PORTREVISION=	4
 CATEGORIES=	www
 PKGNAMESUFFIX=	-site-generator
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Static site generator written in Rust
-WWW=		https://cobalt-org.github.io/
+WWW=		https://cobalt-org.github.io/ \
+		https://github.com/cobalt-org/cobalt.rs
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE-MIT
@@ -261,8 +263,5 @@ CARGO_CRATES=	addr2line-0.22.0 \
 		yaml-rust-0.4.5
 
 PLIST_FILES=	bin/${PORTNAME}
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	consul
-DISTVERSION=	1.19.1
+DISTVERSION=	1.20.1
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	sysutils
@@ -44,7 +44,7 @@ CONSUL_USER?=	consul
 CONSUL_GROUP?=	consul
 CONSUL_DBDIR?=	/var/db/${PORTNAME}
 
-GITID=		9fc827c
+GITID=		920cc7c
 
 # Bring DISTINFO_FILE into scope so we can get the timestamp.
 .include <bsd.port.pre.mk>

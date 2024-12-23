@@ -1,5 +1,5 @@
-TIMESTAMP = 1722861564
-SHA256 (go/sysutils_hcloud/hcloud-v1.46.0/v1.46.0.mod) = cb3ff2336ed6bbd521fe51adf6903cc696efbb83841e0dff4038dde4ccfae57c
-SIZE (go/sysutils_hcloud/hcloud-v1.46.0/v1.46.0.mod) = 2554
-SHA256 (go/sysutils_hcloud/hcloud-v1.46.0/v1.46.0.zip) = e5d786a34a9e7cef7d24ac9505f9c3cd44fa68d754a0f9a87a0655d6c2fc2d34
-SIZE (go/sysutils_hcloud/hcloud-v1.46.0/v1.46.0.zip) = 473671
+TIMESTAMP = 1731789318
+SHA256 (go/sysutils_hcloud/hcloud-v1.49.0/v1.49.0.mod) = 2cf79cab6b678885f72eb465e36a2181b2559a42c4e2d7776a7b7f9997d5150b
+SIZE (go/sysutils_hcloud/hcloud-v1.49.0/v1.49.0.mod) = 2950
+SHA256 (go/sysutils_hcloud/hcloud-v1.49.0/v1.49.0.zip) = 1665e1c95bc96543c736672a3b4bba0ec0fc2396ee3a503328e72513f61b01a0
+SIZE (go/sysutils_hcloud/hcloud-v1.49.0/v1.49.0.zip) = 496686

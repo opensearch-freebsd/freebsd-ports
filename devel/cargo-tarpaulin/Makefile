@@ -1,5 +1,5 @@
 PORTNAME=	cargo-tarpaulin
-DISTVERSION=	0.31.0
+DISTVERSION=	0.31.3
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -42,7 +42,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		bytes-1.6.0 \
 		camino-1.1.6 \
 		cargo-platform-0.1.8 \
-		cargo_metadata-0.18.1 \
+		cargo_metadata-0.19.0 \
 		cc-1.0.97 \
 		cfg-if-1.0.0 \
 		cfg_aliases-0.2.1 \
@@ -76,7 +76,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		futures-task-0.3.30 \
 		futures-util-0.3.30 \
 		gimli-0.28.1 \
-		gimli-0.31.0 \
+		gimli-0.31.1 \
 		git2-0.19.0 \
 		glob-0.3.1 \
 		gzip-header-1.0.0 \
@@ -112,7 +112,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		libssh2-sys-0.3.0 \
 		libz-sys-1.1.16 \
 		linux-raw-sys-0.4.13 \
-		llvm_profparser-0.6.0 \
+		llvm_profparser-0.7.0 \
 		log-0.4.21 \
 		matchers-0.1.0 \
 		md5-0.7.0 \
@@ -130,7 +130,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		num_cpus-1.16.0 \
 		object-0.26.2 \
 		object-0.32.2 \
-		object-0.36.1 \
+		object-0.36.5 \
 		once_cell-1.19.0 \
 		openssl-0.10.66 \
 		openssl-macros-0.1.1 \
@@ -142,21 +142,21 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		pin-project-lite-0.2.14 \
 		pin-utils-0.1.0 \
 		pkg-config-0.3.30 \
-		proc-macro2-1.0.86 \
-		procfs-0.16.0 \
-		procfs-core-0.16.0 \
+		proc-macro2-1.0.92 \
+		procfs-0.17.0 \
+		procfs-core-0.17.0 \
 		quick-error-1.2.3 \
-		quick-xml-0.36.0 \
-		quote-1.0.36 \
-		regex-1.10.5 \
+		quick-xml-0.37.1 \
+		quote-1.0.37 \
+		regex-1.11.1 \
 		regex-automata-0.1.10 \
-		regex-automata-0.4.6 \
+		regex-automata-0.4.8 \
 		regex-syntax-0.6.29 \
-		regex-syntax-0.8.3 \
+		regex-syntax-0.8.5 \
 		reqwest-0.11.27 \
 		rustc-demangle-0.1.24 \
 		rustc-hash-1.1.0 \
-		rustc_version-0.4.0 \
+		rustc_version-0.4.1 \
 		rustix-0.38.34 \
 		rustls-pemfile-1.0.4 \
 		rusty-fork-0.3.0 \
@@ -167,10 +167,10 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		security-framework-2.11.0 \
 		security-framework-sys-2.11.0 \
 		semver-1.0.23 \
-		serde-1.0.204 \
-		serde_derive-1.0.204 \
-		serde_json-1.0.120 \
-		serde_spanned-0.6.6 \
+		serde-1.0.215 \
+		serde_derive-1.0.215 \
+		serde_json-1.0.133 \
+		serde_spanned-0.6.7 \
 		serde_urlencoded-0.7.1 \
 		sharded-slab-0.1.7 \
 		slab-0.4.9 \
@@ -179,7 +179,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		stable_deref_trait-1.2.0 \
 		static_assertions-1.1.0 \
 		strsim-0.11.1 \
-		syn-2.0.61 \
+		syn-2.0.82 \
 		sync_wrapper-0.1.2 \
 		system-configuration-0.5.1 \
 		system-configuration-sys-0.5.0 \
@@ -194,13 +194,13 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		tokio-1.37.0 \
 		tokio-native-tls-0.3.1 \
 		tokio-util-0.7.11 \
-		toml-0.8.15 \
-		toml_datetime-0.6.6 \
-		toml_edit-0.22.16 \
+		toml-0.8.19 \
+		toml_datetime-0.6.8 \
+		toml_edit-0.22.20 \
 		tower-service-0.3.2 \
-		tracing-0.1.40 \
-		tracing-attributes-0.1.27 \
-		tracing-core-0.1.32 \
+		tracing-0.1.41 \
+		tracing-attributes-0.1.28 \
+		tracing-core-0.1.33 \
 		tracing-log-0.2.0 \
 		tracing-subscriber-0.3.18 \
 		try-lock-0.2.5 \
@@ -249,15 +249,12 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		windows_x86_64_gnullvm-0.52.5 \
 		windows_x86_64_msvc-0.48.5 \
 		windows_x86_64_msvc-0.52.5 \
-		winnow-0.6.8 \
+		winnow-0.6.18 \
 		winreg-0.50.0
 
 OPENSSLINC=	/usr/include
 OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/cargo-tarpaulin
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/cargo-tarpaulin
 
 .include <bsd.port.mk>

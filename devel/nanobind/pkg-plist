@@ -1,3 +1,5 @@
+cmake/nanobind-config-version.cmake
+cmake/nanobind-config.cmake
 include/nanobind/eigen/dense.h
 include/nanobind/eigen/sparse.h
 include/nanobind/eval.h
@@ -33,6 +35,7 @@ include/nanobind/stl/detail/chrono.h
 include/nanobind/stl/detail/nb_array.h
 include/nanobind/stl/detail/nb_dict.h
 include/nanobind/stl/detail/nb_list.h
+include/nanobind/stl/detail/nb_optional.h
 include/nanobind/stl/detail/nb_set.h
 include/nanobind/stl/detail/traits.h
 include/nanobind/stl/filesystem.h
@@ -54,4 +57,18 @@ include/nanobind/stl/vector.h
 include/nanobind/stl/wstring.h
 include/nanobind/trampoline.h
 include/nanobind/typing.h
-lib/libnanobind.so
+%%DATADIR%%/src/buffer.h
+%%DATADIR%%/src/common.cpp
+%%DATADIR%%/src/error.cpp
+%%DATADIR%%/src/hash.h
+%%DATADIR%%/src/implicit.cpp
+%%DATADIR%%/src/nb_combined.cpp
+%%DATADIR%%/src/nb_enum.cpp
+%%DATADIR%%/src/nb_func.cpp
+%%DATADIR%%/src/nb_internals.cpp
+%%DATADIR%%/src/nb_internals.h
+%%DATADIR%%/src/nb_ndarray.cpp
+%%DATADIR%%/src/nb_static_property.cpp
+%%DATADIR%%/src/nb_type.cpp
+%%DATADIR%%/src/trampoline.cpp
+%%DATADIR%%/stubgen.py

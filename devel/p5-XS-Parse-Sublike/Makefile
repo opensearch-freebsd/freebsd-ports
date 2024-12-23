@@ -1,5 +1,5 @@
 PORTNAME=	XS-Parse-Sublike
-PORTVERSION=	0.22
+PORTVERSION=	0.30
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:PEVANS
@@ -18,8 +18,9 @@ TEST_DEPENDS=	p5-Test-Simple>=1.302200:devel/p5-Test-Simple
 USES=		perl5
 USE_PERL5=	modbuild
 
+PORTSCOUT=	limit:^[0-9\.]*$$
+
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Sublike/Extended/Extended.so
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/XS/Parse/Sublike/Sublike.so
 
 .include <bsd.port.mk>

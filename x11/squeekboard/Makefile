@@ -1,6 +1,7 @@
 PORTNAME=	squeekboard
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.41.0
+DISTVERSION=	1.43.1
+PORTREVISION=	1
 CATEGORIES=	x11 wayland
 
 PATCH_SITES=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
@@ -32,11 +33,13 @@ CARGO_BUILD=	no
 CARGO_INSTALL=	no
 CARGO_TEST=	no
 MESON_ARGS=	-Dstrict=false
+GLIB_SCHEMAS=	sm.puri.Squeekboard.gschema.xml
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/${PORTNAME}-entry \
 		bin/${PORTNAME}-test-layout \
 		share/applications/sm.puri.Squeekboard.desktop \
 		share/locale/be/LC_MESSAGES/${PORTNAME}.mo \
+		share/locale/bg/LC_MESSAGES/${PORTNAME}.mo \
 		share/locale/ca/LC_MESSAGES/${PORTNAME}.mo \
 		share/locale/cs/LC_MESSAGES/${PORTNAME}.mo \
 		share/locale/de/LC_MESSAGES/${PORTNAME}.mo \

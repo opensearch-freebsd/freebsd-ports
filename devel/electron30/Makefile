@@ -1,6 +1,7 @@
 PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER:S/-beta./.b/}
+PORTREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v30.1.1/:chromium \
 		https://commondatastorage.googleapis.com/chromium-nodejs/:chromium_node \
@@ -19,6 +20,9 @@ WWW=		https://electronjs.org/
 LICENSE=	BSD3CLAUSE LGPL21 MPL11 MIT
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/electron/LICENSE
+
+DEPRECATED=	EOLed upstream, switch to newer version
+EXPIRATION_DATE=	2024-12-31
 
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
 
@@ -81,7 +85,6 @@ GH_TUPLE=	nodejs:node:v${NODE_VER}:node \
 		EngFlow:reclient-configs:${ENGFLOW_RECLIENT_CONFIGS_VER}:reclient_configs
 USE_GL=		gbm gl glesv2
 USE_GNOME=	atk cairo gdkpixbuf2 gtk30 libxml2 libxslt pango
-USE_LDCONFIG=	${DATADIR}
 USE_XORG=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xrandr \
 		xrender xscrnsaver xtst
 
@@ -97,6 +100,7 @@ POST_BUILD_DIST_TARGETS=electron_dist_zip electron_chromedriver_zip \
 
 DATADIR=	${PREFIX}/share/${PORTNAME}${PKGNAMESUFFIX}
 BINARY_ALIAS=	python3=${PYTHON_CMD}
+BUNDLE_LIBS=	yes
 
 NO_WRKSUBDIR=	yes
 WRKSRC_SUBDIR=	src
@@ -226,7 +230,7 @@ CHROMIUM_NODE_MODULES_HASH=	97a0b3c4c39cf05de1eafb6ffdec0fddd643f0a2
 # See ${WRKSRC}/third_party/test_fonts/test_fonts.tar.gz.sha1 for CHROMIUM_TEST_FONTS_HASH
 CHROMIUM_TEST_FONTS_HASH=	336e775eec536b2d785cc80eff6ac39051931286
 # See ${WRKSRC}/electron/DEPS for NODE_VER
-NODE_VER=			20.15.1
+NODE_VER=			20.16.0
 # See ${WRKSRC}/electron/DEPS for NAN_VER
 NAN_VER=			e14bdcd1f72d62bca1d541b66da43130384ec213
 # See ${WRKSRC}/electron/DEPS for SQUIRREL_MAC_VER

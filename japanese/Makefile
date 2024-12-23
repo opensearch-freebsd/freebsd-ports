@@ -14,6 +14,7 @@
     SUBDIR += alias-fonts
     SUBDIR += another-htmllint
     SUBDIR += anthy
+    SUBDIR += anthy-unicode
     SUBDIR += aobook
     SUBDIR += bible_names-fpw
     SUBDIR += boiled-mozc
@@ -119,6 +120,7 @@
     SUBDIR += font-std
     SUBDIR += font-takao
     SUBDIR += font-udev-gothic
+    SUBDIR += font-udev-gothic-hs
     SUBDIR += font-udev-gothic-nf
     SUBDIR += font-ume
     SUBDIR += font-vlgothic
@@ -146,6 +148,7 @@
     SUBDIR += jvim3
     SUBDIR += kakasi
     SUBDIR += kasumi
+    SUBDIR += kasumi-unicode
     SUBDIR += kbanner
     SUBDIR += kcc
     SUBDIR += kcode
@@ -227,7 +230,7 @@
     SUBDIR += pejv-fpw
     SUBDIR += plain2
     SUBDIR += plan
-    SUBDIR += prn
+    SUBDIR += prn-ps
     SUBDIR += py-SudachiPy
     SUBDIR += py-fugashi
     SUBDIR += py-ipadic

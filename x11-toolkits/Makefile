@@ -24,6 +24,8 @@
     SUBDIR += granite7
     SUBDIR += gstreamer1-plugins-gtk
     SUBDIR += gstreamer1-plugins-pango
+    SUBDIR += gstreamer1-plugins-qt5
+    SUBDIR += gstreamer1-plugins-qt6
     SUBDIR += gtk-layer-shell
     SUBDIR += gtk-session-lock
     SUBDIR += gtk-sharp-beans
@@ -88,6 +90,7 @@
     SUBDIR += libhandy
     SUBDIR += libhandy0
     SUBDIR += libshumate
+    SUBDIR += libspelling
     SUBDIR += libunique3
     SUBDIR += libwnck
     SUBDIR += libwnck3
@@ -101,6 +104,9 @@
     SUBDIR += linux-rl9-gtk2
     SUBDIR += linux-rl9-gtk3
     SUBDIR += linux-rl9-pango
+    SUBDIR += linux-rl9-qt5-qtdeclarative
+    SUBDIR += linux-rl9-qt5-qtquickcontrols
+    SUBDIR += linux-rl9-tk86
     SUBDIR += movingmotif
     SUBDIR += mowitz
     SUBDIR += mygui
@@ -170,11 +176,17 @@
     SUBDIR += py-customtkinter
     SUBDIR += py-easygui
     SUBDIR += py-fltk
+    SUBDIR += py-fonticon-fontawesome6
     SUBDIR += py-guietta
+    SUBDIR += py-kivy
+    SUBDIR += py-magicgui
+    SUBDIR += py-pangocffi
     SUBDIR += py-python-xlib
-    SUBDIR += py-qt5-chart
-    SUBDIR += py-qt6-chart
+    SUBDIR += py-qt5-charts
+    SUBDIR += py-qt5-datavis3d
+    SUBDIR += py-qt6-charts
     SUBDIR += py-qt6-datavis3d
+    SUBDIR += py-superqt
     SUBDIR += py-tkinter
     SUBDIR += py-tktreectrl
     SUBDIR += py-wxPython4
@@ -237,6 +249,7 @@
     SUBDIR += tk-wrapper
     SUBDIR += tk86
     SUBDIR += tk87
+    SUBDIR += tk90
     SUBDIR += tkdnd
     SUBDIR += tkshape
     SUBDIR += tktable
@@ -248,7 +261,6 @@
     SUBDIR += vte3
     SUBDIR += wlroots
     SUBDIR += wlroots015
-    SUBDIR += wlroots016
     SUBDIR += wlroots017
     SUBDIR += wmapp
     SUBDIR += wxgtk30

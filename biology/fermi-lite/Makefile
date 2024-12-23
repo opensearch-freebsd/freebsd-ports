@@ -11,13 +11,21 @@ WWW=		https://github.com/lh3/fermi-lite
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		gmake
+ONLY_FOR_ARCHS=		aarch64 amd64 armv7 i386
+ONLY_FOR_ARCHS_REASON=	Use of the <emmintrin.h> header in ksw.c which is only for SSE2
+
+armv7_BUILD_DEPENDS=	${LOCALBASE}/include/sse2neon.h:devel/sse2neon
+aarch64_BUILD_DEPENDS=	${armv7_BUILD_DEPENDS}
+BUILD_DEPENDS+=	${${ARCH}_BUILD_DEPENDS}
+
+USES=		gmake localbase
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	lh3
 
-CFLAGS_powerpc64le=	-DNO_WARN_X86_INTRINSICS
+CFLAGS_powerpc64le=	-DNO_WARN_X86_INTRINSICS # not sure if it was really ever built on powerpc64le
+CFLAGS_i386=	-msse2
 MAKE_ARGS=	CFLAGS="${CFLAGS}"
 
 BINARY_ALIAS=	gcc=${CC}

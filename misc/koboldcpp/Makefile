@@ -1,6 +1,6 @@
 PORTNAME=	koboldcpp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.72
+DISTVERSION=	1.80.1
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,12 +10,15 @@ WWW=		https://github.com/lostruins/koboldcpp
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
+BROKEN_armv7=	compilation fails, see https://github.com/LostRuins/koboldcpp/issues/1129
+BROKEN_i386=	compilation fails, see https://github.com/LostRuins/koboldcpp/issues/1129
+
 LIB_DEPENDS=	libopenblas.so:math/openblas \
 		libvulkan.so:graphics/vulkan-loader
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}customtkinter>0:x11-toolkits/py-customtkinter@${PY_FLAVOR}
 
-USES=		gmake localbase:ldflags python shebangfix
+USES=		compiler:c++11-lang gmake localbase:ldflags python shebangfix
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	LostRuins
@@ -26,6 +29,10 @@ MAKE_ARGS=	LLAMA_OPENBLAS=1 LLAMA_VULKAN=1 LLAMA_PORTABLE=1 LDFLAGS="${LDFLAGS}"
 
 ALL_TARGET=
 
+.if defined(WITH_DEBUG)
+MAKE_ARGS+=	KCPP_DEBUG=1
+.endif
+
 do-install:
 	# dir
 	${MKDIR} ${STAGEDIR}${DATADIR}
@@ -35,7 +42,7 @@ do-install:
 	${RLN} ${STAGEDIR}${DATADIR}/koboldcpp.py ${STAGEDIR}${PREFIX}/bin/koboldcpp
 	# libraries
 .for lib in koboldcpp_default.so koboldcpp_failsafe.so koboldcpp_noavx2.so \
-	    koboldcpp_openblas.so koboldcpp_vulkan.so koboldcpp_vulkan_noavx2.so
+	    koboldcpp_vulkan.so koboldcpp_vulkan_noavx2.so
 	${INSTALL_LIB} ${WRKSRC}/${lib} ${STAGEDIR}${DATADIR}
 .endfor
 	# embd files
