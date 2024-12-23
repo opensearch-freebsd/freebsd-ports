@@ -1,14 +1,13 @@
 PORTNAME=	data-prepper
-DISTVERSION?=	2.8.0
+DISTVERSION?=	2.10.2
 DISTVERSIONSUFFIX=	-linux-x64
 CATEGORIES=	sysutils java
-MASTER_SITES=	https://artifacts.data-prepper.org/${PORTNAME}/${DISTVERSION}/
-PKGNAMEPREFIX=	opensearch-
-DISTNAME=	${PKGNAME}${DISTVERSIONSUFFIX}
+MASTER_SITES=   https://artifacts.opensearch.org/${PORTNAME}/${DISTVERSION}/
+DISTNAME=	opensearch-${PKGNAME}${DISTVERSIONSUFFIX}
 
 MAINTAINER=	opensearch@FreeBSD.org
 COMMENT?=	Data Prepper
-WWW=		https://data-prepper.org
+WWW=		https://opensearch.org
 
 LICENSE=	APACHE20
 
@@ -23,7 +22,7 @@ SHEBANG_FILES=	bin/data-prepper
 
 NO_BUILD=	yes
 
-#.include <bsd.port.options.mk>
+
 
 BINS=		data-prepper	
 CONFIG_FILES=	data-prepper-config.yaml log4j2-rolling.properties
