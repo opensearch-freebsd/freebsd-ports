@@ -1,6 +1,9 @@
-!!! This port is under development. Please consider it experimental. !!!
+This port is currently under development, so please consider it experimental.
 
-Data Prepper needs pipelines to be configured in
-/usr/local/lib/data-prepper/pipelines
+Data Prepper requires at least one pipeline to be configured in order to run. Pipelines should be placed in:
 
-Examples can be found in /usr/local/lib/data-prepper/examples
+/usr/local/share/data-prepper/pipelines/
+
+Example configurations are available in:
+
+/usr/local/share/examples/data-prepper/
