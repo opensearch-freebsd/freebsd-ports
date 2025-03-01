@@ -1,16 +1,22 @@
 PORTNAME=	hypre
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.32.0
+PORTREVISION=	1
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Scalable Linear Solvers and Multigrid Methods
-WWW=		https://computing.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods
+WWW=		https://computing.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods \
+		https://github.com/hypre-space/hypre
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
 LICENSE_FILE_APACHE20=	${WRKSRC}/../LICENSE-APACHE
 LICENSE_FILE_MIT=	${WRKSRC}/../LICENSE-MIT
+
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
 LIB_DEPENDS=	libsuperlu.so:math/superlu
 

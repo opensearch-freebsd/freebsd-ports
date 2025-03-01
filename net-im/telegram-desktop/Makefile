@@ -1,5 +1,6 @@
 PORTNAME=	telegram-desktop
-DISTVERSION=	5.9.0
+DISTVERSION=	5.11.1
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${DISTVERSION}/
 DISTNAME=	tdesktop-${DISTVERSION}-full
@@ -32,6 +33,8 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libdbus-1.so:devel/dbus \
 		libdispatch.so:devel/libdispatch \
 		libfmt.so:devel/libfmt \
+		libgeoclue-2.so:net/geoclue \
+		libgeocode-glib-2.so:net/geocode-glib2 \
 		libhunspell-1.7.so:textproc/hunspell \
 		liblz4.so:archivers/liblz4 \
 		libopenh264.so:multimedia/openh264 \
@@ -44,36 +47,21 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libxxhash.so:devel/xxhash \
 		libvpx.so:multimedia/libvpx
 
-FLAVORS=	qt5 qt6
-FLAVOR?=	${FLAVORS:[1]}
-qt5_PKGNAMESUFFIX=
-qt6_PKGNAMESUFFIX=	-qt6
-qt5_CONFLICTS_INSTALL=	${PORTNAME}-qt6
-qt6_CONFLICTS_INSTALL=	${PORTNAME}
-
-USES=		cmake compiler:c++20-lang desktop-file-utils gl gnome jpeg localbase \
-		minizip openal pkgconfig python:build ssl
+USES=		cmake compiler:c++20-lang desktop-file-utils gl gnome jpeg kde:6 localbase \
+		minizip openal pkgconfig python:build qt:6 ssl
 
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	telegramdesktop
 GH_PROJECT=	tdesktop
 
-.if ${FLAVOR} == qt5
-USES+=		kde:5 qt:5
-USE_QT=		buildtools:build core dbus declarative gui imageformats network qmake:build \
-		svg widgets
-USE_KDE=	coreaddons kimageformats
-.else
-USES+=		kde:6 qt:6
 USE_QT=		5compat base declarative imageformats lottie shadertools svg tools:build
 USE_KDE=	coreaddons kimageformats
-.endif
 
 USE_GL=		gl
 USE_GNOME=	glib20 glibmm26 introspection
 
 CMAKE_ARGS=	-DTDESKTOP_API_ID=${TELEGRAM_API_ID} -DTDESKTOP_API_HASH=${TELEGRAM_API_HASH} \
-		-DQT_VERSION_MAJOR=${FLAVOR:S/qt//}
+		-DQT_VERSION_MAJOR=6
 CMAKE_ON=	DESKTOP_APP_USE_PACKAGED DESKTOP_APP_DISABLE_CRASH_REPORTS \
 		DESKTOP_APP_DISABLE_JEMALLOC \
 		DESKTOP_APP_DISABLE_SCUDO
@@ -115,12 +103,16 @@ X11_LIB_DEPENDS=	libxcb-keysyms.so:x11/xcb-util-keysyms \
 TELEGRAM_API_HASH=	20a3432aab43f24bb4460fceac5ba38d
 TELEGRAM_API_ID=	601761
 
-.include <bsd.port.options.mk>
+.include <bsd.port.pre.mk> # for COMPILER_VERSION
 
 .if ${OPSYS} == FreeBSD && defined(WITH_CCACHE_BUILD) && !defined(NO_CCACHE)
 CMAKE_ARGS+=	-DCMAKE_CC_COMPILER_LAUNCHER="${LOCALBASE}/bin/ccache" \
 		-DCMAKE_CPP_COMPILER_LAUNCHER="${LOCALBASE}/bin/ccache" \
 		-DCMAKE_CXX_COMPILER_LAUNCHER="${LOCALBASE}/bin/ccache"
+.endif
+
+.if ${OPSYS} == FreeBSD && ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} < 190
+EXTRA_PATCHES=		${PATCHDIR}/extrapatch-Telegram_lib__base_base_qt_qt__compare.h
 .endif
 
 post-extract:
@@ -153,4 +145,4 @@ post-patch:
 	${REINPLACE_CMD} -e /-Wno-maybe-uninitialized/d -e /-fstack-clash-protection/d \
 	    ${WRKSRC}/cmake/options_linux.cmake
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

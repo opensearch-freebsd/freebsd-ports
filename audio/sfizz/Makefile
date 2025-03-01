@@ -1,5 +1,6 @@
 PORTNAME=	sfizz
 DISTVERSION=	1.2.3
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -8,8 +9,6 @@ WWW=		https://sfz.tools/sfizz/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-BROKEN_aarch64=	compilation fails: fatal error: 'linux/auxvec.h' file not found, see https://github.com/steinwurf/cpuid/issues/65
 
 LIB_DEPENDS=	libabsl_hash.so:devel/abseil
 RUN_DEPENDS=	zenity:x11/zenity

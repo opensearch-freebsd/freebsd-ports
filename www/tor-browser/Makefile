@@ -1,14 +1,19 @@
 PORTNAME=	tor-browser
-DISTVERSION=	14.0.3
+DISTVERSION=	14.0.6
+PORTREVISION=	2
 CATEGORIES=	www net security wayland
 MASTER_SITES=	TOR \
+		LOCAL/vvd \
+		LOCAL/vvd:source1 \
 		https://build-sources.tbb.torproject.org/:source1 \
 		LOCAL/jsm:source2 \
+		LOCAL/vvd:source2 \
+		LOCAL/vvd:source3 \
 		https://secure.informaction.com/%SUBDIR%/:source3
 MASTER_SITE_SUBDIR=	torbrowser/${DISTVERSION}/:DEFAULT \
 			download/releases/:source3
-DISTNAME=	src-firefox-tor-browser-128.5.0esr-14.0-1-build2
-NOSCRIPT=	noscript-11.5.2.xpi
+DISTNAME=	src-firefox-tor-browser-128.7.0esr-14.0-1-build3
+NOSCRIPT=	noscript-12.1.1.xpi
 DISTFILES=	${DISTNAME}.tar.xz \
 		manual_215922.zip:source1 \
 		fonts-3--4348e1.tar.zst:source2 \
@@ -22,14 +27,14 @@ LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.94:security/nss \
+		nss>=3.101:security/nss \
 		icu>=73.1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
-		harfbuzz>=8.2.2:print/harfbuzz \
+		harfbuzz>=8.5.0:print/harfbuzz \
 		graphite2>=1.3.14:graphics/graphite2 \
-		png>=1.6.39:graphics/png \
+		png>=1.6.43:graphics/png \
 		dav1d>=1.0.0:multimedia/dav1d \
-		libvpx>=1.13.1:multimedia/libvpx \
+		libvpx>=1.14:multimedia/libvpx \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
 		autoconf2.13:devel/autoconf2.13 \
@@ -49,8 +54,8 @@ USE_GITLAB=	nodefault
 GL_SITE=	https://gitlab.torproject.org/
 GL_ACCOUNT=	tpo
 GL_PROJECT=	translation:basebrowser translation:torbrowser
-TAG_BASE=	caa431bbea1a76d7ad61eeda94086a1513762605
-TAG_TOR=	4314d0a7ce780ffdf82b84e324bfbc437198f993
+TAG_BASE=	93eddbd3888852c09e130d536fb3c9bd7e4e6f57
+TAG_TOR=	dd30508387040bf0a1217a1eb9edb80ac21926f2
 GL_TAGNAME=	${TAG_BASE}:basebrowser ${TAG_TOR}:torbrowser
 USE_MOZILLA=	-sqlite
 

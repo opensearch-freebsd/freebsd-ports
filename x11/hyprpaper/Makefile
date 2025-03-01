@@ -1,6 +1,7 @@
 PORTNAME=	hyprpaper
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.3
+DISTVERSION=	0.7.4
+PORTREVISION=	2
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -38,6 +39,7 @@ post-patch:
 		-e '/ rt)/d' \
 		-e '/install.*systemd/d' \
 		${WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} '/GLES3/d' ${WRKSRC}/src/includes.hpp
 # Respect consolekit2 as XDG_RUNTIME_DIR fallback
 	@${REINPLACE_CMD} 's,/run/user,/var&,' \
 		${WRKSRC}/src/ipc/Socket.cpp

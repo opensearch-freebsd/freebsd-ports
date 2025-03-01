@@ -1,5 +1,5 @@
 PORTNAME=	goland
-PORTVERSION=	2024.3
+DISTVERSION=	2024.3.2.1
 CATEGORIES=	devel
 MASTER_SITES=	https://download-cdn.jetbrains.com/go/
 PKGNAMEPREFIX=	jetbrains-
@@ -23,10 +23,9 @@ RUN_DEPENDS=	intellij-fsnotifier>0:java/intellij-fsnotifier \
 		jetbrains-sqlite>=241.15989.150:devel/jetbrains-sqlite \
 		lsof:sysutils/lsof
 
-USES=		cpe python:run
+USES=		cpe java python:run
 
 CPE_VENDOR=	jetbrains
-USE_JAVA=	yes
 JAVA_VERSION=	17+
 
 DATADIR=	${PREFIX}/share/jetbrains/${PORTNAME}
@@ -67,8 +66,7 @@ do-install:
 		${WRKSRC}/lib/native \
 		${WRKSRC}/lib/pty4j \
 		${WRKSRC}/plugins/cwm-plugin \
-		${WRKSRC}/plugins/gateway-plugin \
-		${WRKSRC}/plugins/gateway-terminal \
+		${WRKSRC}/plugins/gateway-plugin/lib/remote-dev-workers \
 		${WRKSRC}/plugins/go-plugin/lib/dlv \
 		${WRKSRC}/plugins/remote-dev-server
 	${MKDIR} ${STAGEDIR}${DATADIR}

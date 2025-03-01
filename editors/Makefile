@@ -65,7 +65,6 @@
     SUBDIR += hnb
     SUBDIR += hte
     SUBDIR += imhex
-    SUBDIR += imhex-current
     SUBDIR += jed
     SUBDIR += jedit
     SUBDIR += joe
@@ -75,7 +74,6 @@
     SUBDIR += kakoune
     SUBDIR += kakoune-lsp
     SUBDIR += kate
-    SUBDIR += kate-devel
     SUBDIR += kibi
     SUBDIR += kile
     SUBDIR += komodo-edit

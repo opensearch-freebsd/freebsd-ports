@@ -1,7 +1,7 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
 DISTVERSION=	7.0.16
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases net
 MASTER_SITES=	https://hg.mozilla.org/mozilla-central/raw-rev/:patches
 PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}
@@ -32,12 +32,14 @@ BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 BUILD_DEPENDS+=	gm4:devel/m4 \
 		gsed:textproc/gsed
 LIB_DEPENDS=	libcurl.so:ftp/curl \
-		libpcre2-8.so:devel/pcre2 \
 		libsnappy.so:archivers/snappy \
 		libstemmer.so:textproc/snowballstemmer \
 		libunwind.so:devel/libunwind \
 		libyaml-cpp.so:devel/yaml-cpp \
 		libzstd.so:archivers/zstd
+
+FLAVORS=	default armv80a
+armv80a_PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}-armv80a
 
 USES=		compiler:c++20-lang cpe python:build scons shebangfix ssl
 # gmake is used while running ${WRKSRC}/src/third_party/mozjs/gen-config.sh
@@ -63,7 +65,6 @@ MAKE_ARGS=	--allocator=system \
 		--runtime-hardening=on \
 		--ssl \
 		--use-system-libunwind \
-		--use-system-pcre2 \
 		--use-system-snappy \
 		--use-system-stemmer \
 		--use-system-yaml \
@@ -78,8 +79,7 @@ CFLAGS+=	-DBOOST_NO_CXX98_FUNCTION_BASE
 
 CONFLICTS_INSTALL=	mongodb[0-9][0-9]
 
-EXTRACT_AFTER_ARGS=	--exclude src/third_party/pcre2 \
-			--exclude src/third_party/snappy-* \
+EXTRACT_AFTER_ARGS=	--exclude src/third_party/snappy-* \
 			--exclude src/third_party/libstemmer_c \
 			--exclude src/third_party/unwind \
 			--exclude src/third_party/yaml-cpp \
@@ -93,6 +93,9 @@ GROUPS=		mongodb
 OPTIONS_DEFINE=		LTO NOAVX SASL
 OPTIONS_DEFINE_aarch64=	ARMV80A
 OPTIONS_DEFAULT=	NOAVX SASL
+.if ${FLAVOR:U} == armv80a
+OPTIONS_SET+=	ARMV80A
+.endif
 
 # MongoDB on non-LSE ARM cpu like Raspberry Pi can work but is unsupported upstream.
 # Can give corruption on high concurrency.
@@ -112,6 +115,10 @@ SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 SASL_MAKE_ARGS=		--use-sasl-client
 
 .include <bsd.port.pre.mk>
+
+.if ${FLAVOR:U} == armv80a && ${ARCH} != aarch64
+IGNORE=		flavor armv80a is only valid on aarch64
+.endif
 
 ALL_TARGET=	install-core
 

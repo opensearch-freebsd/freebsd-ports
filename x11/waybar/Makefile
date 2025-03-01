@@ -1,11 +1,7 @@
 PORTNAME=	waybar
-DISTVERSION=	0.11.0
-PORTREVISION=	2
+DISTVERSION=	0.12.0
 CATEGORIES=	x11 wayland
 PKGNAMESUFFIX=	${FLAVOR:N${FLAVORS:[1]}:C/.+/-${FLAVOR}/}
-PATCH_SITES=    https://github.com/Alexays/Waybar/commit/
-# see https://github.com/Alexays/Waybar/issues/3616
-PATCHFILES= 0d02f6877d88551ea2be0cd151c1e6354e208b1c.patch:-p1
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Highly customizable Wayland bar for Sway and wlroots-based compositors
@@ -175,25 +171,5 @@ pre-test:
 		${MAKE} -C${.CURDIR} build MESON_ARGS="${MESON_ARGS} --reconfigure -Dtests=enabled"; \
 		${TOUCH} ${WRKDIR}/.meson_build_tests; \
 	fi
-
-# XXX Drop after FreeBSD 13.3 EOL around 2025-07-01 (don't forget distinfo)
-.if ${CXX} == c++ && exists(/usr/include/c++/v1/__chrono/concepts.h) && \
-    !exists(/usr/include/c++/v1/__chrono/tzdb.h) || make(makesum) || make(fetch)
-USES+=		cmake:indirect
-CMAKE_ARGS=	-B ${WRKDIR}/libcxx_build -S ${WRKSRC_libcxx}/libcxx
-CMAKE_OFF=	LIBCXX_INCLUDE_BENCHMARKS
-CMAKE_INSTALL_PREFIX=	${WRKDIR}/libcxx_prefix
-
-# XXX Move into separate port and standardize via USES
-GH_TUPLE+=	llvm:llvm-project:llvmorg-16.0.1:libcxx
-CXXFLAGS+=	-nostdinc++ -isystem${WRKDIR}/libcxx_prefix/include/c++/v1
-# Don't link against new libc++ as it's not necessary
-#LDFLAGS+=	-nostdlib++ -L${WRKDIR}/libcxx_prefix/lib -l:libc++.a -lcxxrt
-
-pre-configure:	bundled-libcxx
-bundled-libcxx:
-	@${SETENVI} ${WRK_ENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS}
-	@${DO_MAKE_BUILD:NDESTDIR*} install -C ${WRKDIR}/libcxx_build
-.endif # exists(/usr/include/c++/v1/__chrono/concepts.h)
 
 .include <bsd.port.mk>

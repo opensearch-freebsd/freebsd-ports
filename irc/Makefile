@@ -19,8 +19,8 @@
     SUBDIR += epic4
     SUBDIR += epic5
     SUBDIR += ergo
-    SUBDIR += ezbounce
     SUBDIR += gruftistats
+    SUBDIR += halloy
     SUBDIR += hexchat
     SUBDIR += hexchat-fish
     SUBDIR += icbirc

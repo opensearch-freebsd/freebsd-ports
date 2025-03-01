@@ -1,20 +1,22 @@
 PORTNAME=	simdjson
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.11.3
+DISTVERSION=	3.12.2
 CATEGORIES=	devel
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	fuz@FreeBSD.org
 COMMENT=	Parsing gigabytes of JSON per second
 WWW=		https://simdjson.org/ \
 		https://github.com/simdjson/simdjson/
 
-LICENSE=	APACHE20
-LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE=	APACHE20 MIT
+LICENSE_COMB=	dual
+LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE
+LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 
-USES=		cmake:testing compiler:c++17-lang python:test
+USES=		cmake:testing compiler:c++17-lang pathfix python:test
 USE_GITHUB=	yes
 # Found in dependencies/CMakeLists.txt
-GH_TUPLE=	simdjson:simdjson-data:a5b13ba:simdjson_data/dependencies/.cache/simdjson-data
+GH_TUPLE=	simdjson:simdjson-data:a5b13babe65c1bba7186b41b43d4cbdc20a5c470:simdjson_data/dependencies/.cache/simdjson-data
 USE_LDCONFIG=	yes
 
 CMAKE_ON=		BUILD_SHARED_LIBS

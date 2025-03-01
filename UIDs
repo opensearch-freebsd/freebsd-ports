@@ -295,7 +295,7 @@ _metronome:*:345:345::0:0:Metronome Daemon:/nonexistent:/usr/sbin/nologin
 ngircd:*:346:346::0:0:ngIRCd Daemon:/var/empty:/usr/sbin/nologin
 eturnal:*:347:347::0:0:eturnal User:/var/spool/eturnal:/bin/sh
 davfs2:*:348:348::0:0:Davfs2 Daemon:/nonexistent:/usr/sbin/nologin
-# free: 349
+tempo:*:349:349::0:0:Tempo Daemon:/nonexistent:/usr/sbin/nologin
 _sabnzbd:*:350:350::0:0:sabnzb Daemon:/nonexistent:/usr/sbin/nologin
 sonarr:*:351:351::0:0:Sonarr PVR:/nonexistent:/usr/sbin/nologin
 radarr:*:352:352::0:0:Radarr Daemon:/nonexistent:/usr/sbin/nologin
@@ -446,8 +446,8 @@ openbao:*:482:482:daemon:0:0:OpenBao Daemon:/nonexistent:/usr/sbin/nologin
 # free: 497
 rustypaste:*:498:498::0:0:Minimal file upload/pastebin service:/nonexistent:/usr/sbin/nologin
 # free: 499
-# free: 500
-# free: 501
+qw:*:500:500::0:0:QuakeWorld Server:/nonexistent:/usr/sbin/nologin
+qwfwd:*:501:501::0:0:QuakeWorld Proxy:/nonexistent:/usr/sbin/nologin
 # free: 502
 # free: 503
 # free: 504
@@ -602,7 +602,7 @@ _xrdp:*:648:648::0:0:xrdp daemon:/nonexistent:/usr/sbin/nologin
 # free: 652
 # free: 653
 # free: 654
-# free: 655
+tinc:*:655:655::0:0:tinc daemon:/nonexistent:/usr/sbin/nologin
 # free: 656
 # free: 657
 # free: 658
@@ -683,7 +683,7 @@ _dnscrypt-wrapper:*:718:65534::0:0:dnscrypt-wrapper user:/var/empty:/usr/sbin/no
 # free: 733
 # free: 734
 c-lightning:*:735:735::0:0:c-lightning Daemon:/var/db/c-lightning:/usr/sbin/nologin
-# free: 736
+zonemaster:*:736:736::0:0:Zonemaster Daemon:/nonexistent:/usr/sbin/nologin
 # free: 737
 # free: 738
 # free: 739
@@ -811,7 +811,7 @@ opensearch:*:855:855::0:0:opensearch user:/nonexistent:/usr/sbin/nologin
 # free: 861
 # free: 862
 # free: 863
-# free: 864
+mediamtx:*:864:864::0:0:mediamtx:/nonexistent:/usr/sbin/nologin
 z2m:*:865:865::0:0:zigbee2mqtt:/usr/local/z2m:/usr/sbin/nologin
 # free: 866
 sqlpage:*:867:867::0:0:SQLPage:/nonexistent:/usr/sbin/nologin

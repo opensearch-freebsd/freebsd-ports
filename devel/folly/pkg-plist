@@ -38,6 +38,7 @@ include/folly/File.h
 include/folly/FileUtil.h
 include/folly/Fingerprint.h
 include/folly/FixedString.h
+include/folly/FmtUtility.h
 include/folly/FollyMemcpy.h
 include/folly/FollyMemset.h
 include/folly/Format-inl.h
@@ -271,12 +272,14 @@ include/folly/coro/Result.h
 include/folly/coro/Retry.h
 include/folly/coro/RustAdaptors.h
 include/folly/coro/ScopeExit.h
+include/folly/coro/SerialQueueRunner.h
 include/folly/coro/SharedLock.h
 include/folly/coro/SharedMutex.h
 include/folly/coro/SharedPromise.h
 include/folly/coro/Sleep-inl.h
 include/folly/coro/Sleep.h
 include/folly/coro/SmallUnboundedQueue.h
+include/folly/coro/Synchronized.h
 include/folly/coro/Task.h
 include/folly/coro/TaskWrapper.h
 include/folly/coro/TimedWait.h
@@ -297,6 +300,7 @@ include/folly/coro/detail/InlineTask.h
 include/folly/coro/detail/Malloc.h
 include/folly/coro/detail/ManualLifetime.h
 include/folly/coro/detail/Traits.h
+include/folly/coro/safe/NowTask.h
 include/folly/crypto/Blake2xb.h
 include/folly/crypto/LtHash-inl.h
 include/folly/crypto/LtHash.h
@@ -341,6 +345,7 @@ include/folly/detail/MemoryIdler.h
 include/folly/detail/PerfScoped.h
 include/folly/detail/PolyDetail.h
 include/folly/detail/RangeCommon.h
+include/folly/detail/RangeSimd.h
 include/folly/detail/RangeSse42.h
 include/folly/detail/SimpleSimdStringUtils.h
 include/folly/detail/SimpleSimdStringUtilsImpl.h
@@ -413,11 +418,9 @@ include/folly/executors/thread_factory/InitThreadFactory.h
 include/folly/executors/thread_factory/NamedThreadFactory.h
 include/folly/executors/thread_factory/PriorityThreadFactory.h
 include/folly/executors/thread_factory/ThreadFactory.h
-include/folly/experimental/EliasFanoCoding.h
 include/folly/experimental/EventCount.h
 include/folly/experimental/FlatCombiningPriorityQueue.h
 include/folly/experimental/FunctionScheduler.h
-include/folly/experimental/RelaxedConcurrentPriorityQueue.h
 include/folly/experimental/TestUtil.h
 include/folly/experimental/ThreadedRepeatingFunctionRunner.h
 include/folly/experimental/channels/Channel-fwd.h
@@ -580,6 +583,7 @@ include/folly/external/fast-crc32/avx512_crc32c_v8s3x4.h
 include/folly/external/fast-crc32/neon_crc32c_v3s4x2e_v2.h
 include/folly/external/fast-crc32/neon_eor3_crc32c_v8s2x4_s3.h
 include/folly/external/fast-crc32/sse_crc32c_v8s3x3.h
+include/folly/external/nvidia/detail/RangeSve2.h
 include/folly/external/nvidia/hash/detail/Crc32cCombineDetail.h
 include/folly/fibers/AddTasks-inl.h
 include/folly/fibers/AddTasks.h
@@ -737,6 +741,7 @@ include/folly/io/async/IoUringBase.h
 include/folly/io/async/IoUringEvent.h
 include/folly/io/async/IoUringEventBaseLocal.h
 include/folly/io/async/IoUringProvidedBufferRing.h
+include/folly/io/async/IoUringZeroCopyBufferPool.h
 include/folly/io/async/Liburing.h
 include/folly/io/async/MuxIOThreadPoolExecutor.h
 include/folly/io/async/NotificationQueue.h
@@ -877,6 +882,7 @@ include/folly/memory/UninitializedMemoryHacks.h
 include/folly/memory/detail/MallocImpl.h
 include/folly/memory/not_null-inl.h
 include/folly/memory/not_null.h
+include/folly/memory/shared_from_this_ptr.h
 include/folly/net/NetOps.h
 include/folly/net/NetOpsDispatcher.h
 include/folly/net/NetworkSocket.h
@@ -951,6 +957,7 @@ include/folly/python/futures.h
 include/folly/python/import.h
 include/folly/python/iobuf.h
 include/folly/settings/Immutables.h
+include/folly/settings/Observer.h
 include/folly/settings/Settings.h
 include/folly/settings/Types.h
 include/folly/settings/detail/SettingsImpl.h

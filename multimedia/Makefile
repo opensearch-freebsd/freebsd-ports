@@ -41,7 +41,6 @@
     SUBDIR += dragon
     SUBDIR += droidcam
     SUBDIR += dtv-scan-tables
-    SUBDIR += dumpmpeg
     SUBDIR += dv2sub
     SUBDIR += dvb-apps
     SUBDIR += dvbcut
@@ -226,6 +225,7 @@
     SUBDIR += makemkv
     SUBDIR += mediaelch
     SUBDIR += mediainfo
+    SUBDIR += mediamtx
     SUBDIR += mencoder
     SUBDIR += minisatip
     SUBDIR += minitube
@@ -240,7 +240,6 @@
     SUBDIR += mp3cd
     SUBDIR += mp4v2
     SUBDIR += mpc-qt
-    SUBDIR += mpeg_encode
     SUBDIR += mplayer
     SUBDIR += mplayer-skins
     SUBDIR += mplex
@@ -289,12 +288,12 @@
     SUBDIR += peek
     SUBDIR += phonon
     SUBDIR += phonon-designerplugin
+    SUBDIR += phonon-mpv
     SUBDIR += phonon-vlc
     SUBDIR += photofilmstrip
     SUBDIR += pipe-viewer
     SUBDIR += pipewire
     SUBDIR += pitivi
-    SUBDIR += plasma5-plank-player
     SUBDIR += plasmatube
     SUBDIR += playerctl
     SUBDIR += plexmediaserver
@@ -341,7 +340,6 @@
     SUBDIR += qwinff
     SUBDIR += rage
     SUBDIR += rav1e
-    SUBDIR += recmpeg
     SUBDIR += recordmydesktop
     SUBDIR += replex
     SUBDIR += ringrtc

@@ -1,5 +1,5 @@
 PORTNAME=	libdispatch
-DISTVERSION=	5.10.1
+DISTVERSION=	6.0.3
 PORTEPOCH=	1
 CATEGORIES=	devel
 
@@ -28,7 +28,7 @@ GH_TAGNAME=	swift-${DISTVERSION}-RELEASE
 #LD?=	${_LLVM_MK_PREFIX}/bin/ld
 #.endif
 
-.if ${OPSYS} == FreeBSD && ${ARCH} == i386
+.if ${OPSYS} == FreeBSD && (${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc)
 CFLAGS+=	-Wno-incompatible-function-pointer-types
 .endif
 

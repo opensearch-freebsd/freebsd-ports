@@ -9,6 +9,7 @@
     SUBDIR += convey
     SUBDIR += coyim
     SUBDIR += cutegram
+    SUBDIR += debugtox
     SUBDIR += dendrite
     SUBDIR += dino
     SUBDIR += discordo
@@ -39,7 +40,6 @@
     SUBDIR += kaccounts-integration
     SUBDIR += kaccounts-providers
     SUBDIR += kaidan
-    SUBDIR += kopete
     SUBDIR += libaccounts-glib
     SUBDIR += libaccounts-qt
     SUBDIR += libmesode
@@ -106,7 +106,6 @@
     SUBDIR += purple-googlechat
     SUBDIR += purple-gowhatsapp
     SUBDIR += purple-mattermost
-    SUBDIR += purple-plugin-pack
     SUBDIR += purple-rocketchat
     SUBDIR += purple-slack
     SUBDIR += purple-teams
@@ -173,6 +172,7 @@
     SUBDIR += toxext
     SUBDIR += toxic
     SUBDIR += toxins
+    SUBDIR += tuba
     SUBDIR += twirssi
     SUBDIR += uTox
     SUBDIR += vqcc-gtk

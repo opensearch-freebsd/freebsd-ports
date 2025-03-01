@@ -160,7 +160,6 @@
     SUBDIR += plasma6-print-manager
     SUBDIR += pnm2ppa
     SUBDIR += posterazor
-    SUBDIR += print-manager
     SUBDIR += ps2eps
     SUBDIR += pscal
     SUBDIR += psdim
@@ -188,7 +187,6 @@
     SUBDIR += py-pydyf
     SUBDIR += py-pypdf
     SUBDIR += py-pypdf2
-    SUBDIR += py-pypdf3
     SUBDIR += py-python-ly
     SUBDIR += py-relatorio
     SUBDIR += py-reportlab
@@ -219,6 +217,7 @@
     SUBDIR += rubygem-prawn-format
     SUBDIR += rubygem-prawn-graph
     SUBDIR += rubygem-prawn-icon
+    SUBDIR += rubygem-prawn-icon3
     SUBDIR += rubygem-prawn-js
     SUBDIR += rubygem-prawn-layout
     SUBDIR += rubygem-prawn-rails

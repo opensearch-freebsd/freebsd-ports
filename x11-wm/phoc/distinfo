@@ -1,5 +1,5 @@
-TIMESTAMP = 1731658674
-SHA256 (phoc-v0.43.0.tar.bz2) = f9bc070451c68403f4e62e1dd718ee3113c1aad95c8bebe02d9c5a29810f85db
-SIZE (phoc-v0.43.0.tar.bz2) = 258406
+TIMESTAMP = 1739546993
+SHA256 (phoc-v0.45.0.tar.bz2) = d6747cc86d94536fd2fd32fb681a2ff1e1296c7f2bc4f9deebc409f08ce65a24
+SIZE (phoc-v0.45.0.tar.bz2) = 273059
 SHA256 (gmobile-v0.2.0.tar.bz2) = a043d63026731b7d2e7cb2a8332ca0f4125d74f15a76db7fd4b857064e0a8727
 SIZE (gmobile-v0.2.0.tar.bz2) = 54872

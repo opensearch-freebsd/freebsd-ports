@@ -22,6 +22,7 @@
     SUBDIR += R-cran-som
     SUBDIR += R-cran-udunits2
     SUBDIR += abinit
+    SUBDIR += acados
     SUBDIR += afni
     SUBDIR += agrum
     SUBDIR += aircraft-datcom
@@ -250,6 +251,7 @@
     SUBDIR += p5-Chemistry-MidasPattern
     SUBDIR += p5-Chemistry-Mok
     SUBDIR += p5-Chemistry-Mol
+    SUBDIR += p5-Chemistry-OpenSMILES
     SUBDIR += p5-Chemistry-Pattern
     SUBDIR += p5-Chemistry-Reaction
     SUBDIR += p5-Chemistry-Ring
@@ -351,6 +353,7 @@
     SUBDIR += py-h5pyd
     SUBDIR += py-hiphive
     SUBDIR += py-hoomd-blue
+    SUBDIR += py-icet
     SUBDIR += py-inequality
     SUBDIR += py-ipygany
     SUBDIR += py-jupyter_jsmol
@@ -380,7 +383,6 @@
     SUBDIR += py-netcdf-flattener
     SUBDIR += py-nglview
     SUBDIR += py-nibabel
-    SUBDIR += py-nilearn
     SUBDIR += py-obspy
     SUBDIR += py-oddt
     SUBDIR += py-openEMS
@@ -393,6 +395,7 @@
     SUBDIR += py-periodictable
     SUBDIR += py-phono3py
     SUBDIR += py-phonopy
+    SUBDIR += py-pnetcdf
     SUBDIR += py-pupynere
     SUBDIR += py-py3Dmol
     SUBDIR += py-pyaixi
@@ -430,6 +433,7 @@
     SUBDIR += py-scipy
     SUBDIR += py-scoria
     SUBDIR += py-sdf
+    SUBDIR += py-seekpath
     SUBDIR += py-segregation
     SUBDIR += py-segyio
     SUBDIR += py-signac
@@ -495,6 +499,7 @@
     SUBDIR += spglib
     SUBDIR += spheral
     SUBDIR += step
+    SUBDIR += sz3
     SUBDIR += tblite
     SUBDIR += teem
     SUBDIR += tfel

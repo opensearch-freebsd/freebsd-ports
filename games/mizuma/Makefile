@@ -1,10 +1,10 @@
 PORTNAME=	mizuma
-DISTVERSION=	2024.11
+DISTVERSION=	2025.02
 CATEGORIES=	games emulators
 MASTER_SITES=	https://codeberg.org/Alexander88207/Mizutamari/archive/${PORTVERSION}${EXTRACT_SUFX}?dummy=/
 
 MAINTAINER=	Alexander88207@protonmail.com
-COMMENT=	Wine front-end for FreeBSD
+COMMENT=	User-friendly Wine front-end
 WWW=		https://codeberg.org/Alexander88207/Mizutamari
 
 LICENSE=	BSD2CLAUSE

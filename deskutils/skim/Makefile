@@ -1,6 +1,7 @@
 PORTNAME=	skim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.15.5
+DISTVERSION=	0.16.0
+PORTREVISION=	1
 CATEGORIES=	deskutils
 PKGNAMESUFFIX=	-fuzzy-finder
 
@@ -25,7 +26,6 @@ CARGO_CRATES=	aho-corasick-1.1.3 \
 		anstyle-query-1.1.2 \
 		anstyle-wincon-3.0.6 \
 		arrayvec-0.7.6 \
-		atty-0.2.14 \
 		autocfg-1.4.0 \
 		beef-0.5.2 \
 		bitflags-1.3.2 \
@@ -36,15 +36,15 @@ CARGO_CRATES=	aho-corasick-1.1.3 \
 		cc-1.2.1 \
 		cfg-if-1.0.0 \
 		cfg_aliases-0.2.1 \
-		chrono-0.4.38 \
-		clap-4.5.21 \
-		clap_builder-4.5.21 \
-		clap_complete-4.5.38 \
+		chrono-0.4.39 \
+		clap-4.5.27 \
+		clap_builder-4.5.27 \
+		clap_complete-4.5.42 \
 		clap_complete_fig-4.5.2 \
-		clap_complete_nushell-4.5.4 \
-		clap_derive-4.5.18 \
-		clap_lex-0.7.3 \
-		clap_mangen-0.2.24 \
+		clap_complete_nushell-4.5.5 \
+		clap_derive-4.5.24 \
+		clap_lex-0.7.4 \
+		clap_mangen-0.2.26 \
 		colorchoice-1.0.3 \
 		core-foundation-sys-0.8.7 \
 		crossbeam-0.8.4 \
@@ -65,7 +65,8 @@ CARGO_CRATES=	aho-corasick-1.1.3 \
 		dirs-sys-next-0.1.2 \
 		either-1.13.0 \
 		env_filter-0.1.2 \
-		env_logger-0.11.5 \
+		env_home-0.1.0 \
+		env_logger-0.11.6 \
 		equivalent-1.0.1 \
 		errno-0.3.9 \
 		fastrand-2.2.0 \
@@ -74,20 +75,18 @@ CARGO_CRATES=	aho-corasick-1.1.3 \
 		getrandom-0.2.15 \
 		hashbrown-0.15.2 \
 		heck-0.5.0 \
-		hermit-abi-0.1.19 \
-		home-0.5.9 \
 		humantime-2.1.0 \
 		iana-time-zone-0.1.61 \
 		iana-time-zone-haiku-0.1.2 \
 		ident_case-1.0.1 \
-		indexmap-2.7.0 \
+		indexmap-2.7.1 \
 		is_terminal_polyfill-1.70.1 \
 		js-sys-0.3.72 \
 		lazy_static-1.5.0 \
 		libc-0.2.165 \
 		libredox-0.1.3 \
 		linux-raw-sys-0.4.14 \
-		log-0.4.22 \
+		log-0.4.25 \
 		memchr-2.7.4 \
 		nix-0.24.3 \
 		nix-0.29.0 \
@@ -112,11 +111,11 @@ CARGO_CRATES=	aho-corasick-1.1.3 \
 		rustversion-1.0.18 \
 		serde-1.0.215 \
 		serde_derive-1.0.215 \
-		shell-quote-0.7.1 \
+		shell-quote-0.7.2 \
 		shlex-1.3.0 \
 		strsim-0.11.1 \
 		syn-2.0.89 \
-		tempfile-3.14.0 \
+		tempfile-3.15.0 \
 		term-0.7.0 \
 		thiserror-1.0.69 \
 		thiserror-impl-1.0.69 \
@@ -129,15 +128,14 @@ CARGO_CRATES=	aho-corasick-1.1.3 \
 		unicode-width-0.1.14 \
 		unicode-width-0.2.0 \
 		utf8parse-0.2.2 \
-		vte-0.13.0 \
-		vte_generate_state_changes-0.1.2 \
+		vte-0.14.1 \
 		wasi-0.11.0+wasi-snapshot-preview1 \
 		wasm-bindgen-0.2.95 \
 		wasm-bindgen-backend-0.2.95 \
 		wasm-bindgen-macro-0.2.95 \
 		wasm-bindgen-macro-support-0.2.95 \
 		wasm-bindgen-shared-0.2.95 \
-		which-7.0.0 \
+		which-7.0.1 \
 		winapi-0.3.9 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
 		winapi-x86_64-pc-windows-gnu-0.4.0 \

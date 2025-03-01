@@ -52,6 +52,7 @@
     SUBDIR += clifm
     SUBDIR += cloc
     SUBDIR += clpbar
+    SUBDIR += code2prompt
     SUBDIR += colortail
     SUBDIR += coloursum
     SUBDIR += colwide
@@ -269,6 +270,7 @@
     SUBDIR += metalink-tools
     SUBDIR += mime-support
     SUBDIR += minidnn
+    SUBDIR += minuet
     SUBDIR += mirmon
     SUBDIR += mmdnn
     SUBDIR += mmv

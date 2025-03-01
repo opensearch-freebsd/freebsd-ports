@@ -1,12 +1,13 @@
 PORTNAME=	natron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.5.1-pre2
+PORTREVISION=	1
 CATEGORIES=	graphics
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	freebsd@sysctl.cz
 COMMENT=	Compositing software Video
-WWW=		https://www.natron.fr/
+WWW=		https://natrongithub.github.io/
 
 LICENSE=	GPLv2
 

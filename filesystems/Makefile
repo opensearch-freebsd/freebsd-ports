@@ -31,7 +31,6 @@
     SUBDIR += fusefs-libs
     SUBDIR += fusefs-libs3
     SUBDIR += genromfs
-    SUBDIR += gitfs
     SUBDIR += gphotofs
     SUBDIR += gvfs
     SUBDIR += hammer2
@@ -39,7 +38,6 @@
     SUBDIR += hfsfuse
     SUBDIR += hfsutils
     SUBDIR += httpdirfs
-    SUBDIR += httpfs
     SUBDIR += ifuse
     SUBDIR += jmtpfs
     SUBDIR += kio-fuse
@@ -102,6 +100,7 @@
     SUBDIR += py-s3fs
     SUBDIR += py-zfs-autobackup
     SUBDIR += rar2fs
+    SUBDIR += rubygem-chef-winrm-fs
     SUBDIR += rubygem-winrm-fs
     SUBDIR += s3backer
     SUBDIR += s3fs
@@ -110,7 +109,6 @@
     SUBDIR += securefs
     SUBDIR += simple-mtpfs
     SUBDIR += smbnetfs
-    SUBDIR += sqlfs
     SUBDIR += squashfs-tools
     SUBDIR += squashfs-tools-ng
     SUBDIR += squashfuse

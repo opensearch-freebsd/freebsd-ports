@@ -1,6 +1,6 @@
 PORTNAME=	glaze
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.2.2
+DISTVERSION=	4.4.3
 CATEGORIES=	devel textproc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -32,6 +32,6 @@ LDFLAGS+=	-pthread
 
 NO_ARCH=	yes
 
-# tests expect the package to be installed, because the test find_package_test tests cmake finding this package
+# tests as of 4.4.3: 100% tests passed, 0 tests failed out of 25
 
 .include <bsd.port.mk>

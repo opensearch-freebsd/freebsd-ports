@@ -46,7 +46,7 @@
     SUBDIR += dhall
     SUBDIR += dlang-tools
     SUBDIR += dotnet
-    SUBDIR += dotnet-runtime
+    SUBDIR += dotnet-host
     SUBDIR += dotnet8
     SUBDIR += duktape
     SUBDIR += duktape-lib
@@ -217,7 +217,6 @@
     SUBDIR += neocmakelsp
     SUBDIR += nesasm
     SUBDIR += newlisp
-    SUBDIR += nhc98
     SUBDIR += nickle
     SUBDIR += nim
     SUBDIR += njs
@@ -230,6 +229,7 @@
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-camlidl
+    SUBDIR += odin
     SUBDIR += oo2c
     SUBDIR += opencoarrays
     SUBDIR += opensycl
@@ -265,7 +265,6 @@
     SUBDIR += p5-ePerl
     SUBDIR += p5-signatures
     SUBDIR += p5-v6
-    SUBDIR += parrot
     SUBDIR += pbasic
     SUBDIR += pcc
     SUBDIR += perl5-devel
@@ -315,6 +314,7 @@
     SUBDIR += python39
     SUBDIR += qmasm
     SUBDIR += quickjs
+    SUBDIR += quickjs-ng
     SUBDIR += quilc
     SUBDIR += racket
     SUBDIR += racket-minimal
@@ -337,7 +337,6 @@
     SUBDIR += rust
     SUBDIR += rust-bootstrap
     SUBDIR += rust-nightly
-    SUBDIR += rust182
     SUBDIR += rustpython
     SUBDIR += s7
     SUBDIR += s7-nrepl
@@ -364,6 +363,7 @@
     SUBDIR += snobol4
     SUBDIR += solidity
     SUBDIR += spidermonkey102
+    SUBDIR += spidermonkey115
     SUBDIR += spidermonkey128
     SUBDIR += spidermonkey78
     SUBDIR += spidermonkey91
@@ -378,13 +378,11 @@
     SUBDIR += tcl-manual
     SUBDIR += tcl-wrapper
     SUBDIR += tcl86
-    SUBDIR += tcl87
     SUBDIR += tcl90
     SUBDIR += tclX
     SUBDIR += tolua
     SUBDIR += tolua++
     SUBDIR += tuareg-mode.el
-    SUBDIR += twelf
     SUBDIR += typstfmt
     SUBDIR += typstyle
     SUBDIR += ucc

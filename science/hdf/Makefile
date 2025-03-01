@@ -5,7 +5,7 @@ CATEGORIES=	science archivers graphics
 MASTER_SITES=	https://github.com/HDFGroup/hdf4/releases/download/hdf${DISTVERSION}/
 DISTNAME=	hdf${DISTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Hierarchical Data Format library (from NCSA)
 WWW=		https://www.hdfgroup.org/solutions/hdf4/
 
@@ -36,9 +36,8 @@ OPTIONS_DEFAULT=	JAVA
 OPTIONS_SUB=		yes
 
 JAVA_CONFIGURE_ENABLE=	java
-JAVA_USE=		JAVA=yes
-JAVA_VARS=		JAVA_VERSION=17 \
-			JAVA_BUILD=yes
+JAVA_USES=		java:build
+JAVA_VARS=		JAVA_VERSION=17
 JAVA_CONFIGURE_ENV=	JAVA_HOME=${JAVA_HOME} \
 			PATH=${JAVA_HOME}/bin:${PATH}
 JAVA_MAKE_ENV=		PATH=${JAVA_HOME}/bin:${PATH}

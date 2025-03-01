@@ -1,5 +1,5 @@
 PORTNAME=	kokkos
-DISTVERSION=	4.5.00
+DISTVERSION=	4.5.01
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,8 +9,6 @@ WWW=		https://kokkos.org/ \
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-NOT_FOR_ARCHS=	armv6 armv7 i386 mips powerpc # Kokkos assumes a 64-bit build; i.e., 8-byte pointers, but found 4-byte pointers instead
 
 RUN_DEPENDS=	bash:shells/bash
 
@@ -27,7 +25,10 @@ LDFLAGS+=	-lexecinfo
 TEST_ENV=	OMP_PROC_BIND=false
 
 OPTIONS_DEFINE=		OPENMP SERIAL
-OPTIONS_DEFAULT=	OPENMP SERIAL # both choices are assumed by science/nlcglib
+OPTIONS_DEFAULT=	SERIAL # both choices are assumed by science/nlcglib
+.if exists(/usr/include/omp.h)
+OPTIONS_DEFAULT+=	OPENMP
+.endif
 
 OPENMP_CMAKE_BOOL=	Kokkos_ENABLE_OPENMP
 

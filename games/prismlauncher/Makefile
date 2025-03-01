@@ -1,5 +1,6 @@
 PORTNAME=	prismlauncher
-DISTVERSION=	9.0
+DISTVERSION=	9.2
+PORTREVISION=	1
 CATEGORIES=	games java
 
 MAINTAINER=	Alexander88207@protonmail.com
@@ -12,12 +13,13 @@ LICENSE_FILE=	${WRKSRC}/COPYING.md
 LIB_DEPENDS=	libcmark.so:textproc/cmark \
 		libquazip1-qt6.so:archivers/quazip@qt6 \
 		libtomlplusplus.so:devel/tomlplusplus
-RUN_DEPENDS=	lwjgl>0:games/lwjgl \
+RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
+		lwjgl>0:games/lwjgl \
 		lwjgl3>0:games/lwjgl3 \
 		openjdk21>0:java/openjdk21 \
 		xrandr:x11/xrandr
 
-USES=		cmake compiler:c++17-lang desktop-file-utils gl kde:6 qt:6 \
+USES=		cmake compiler:c++17-lang desktop-file-utils gl java kde:6 qt:6 \
 		shared-mime-info
 USE_GITHUB=	yes
 GH_ACCOUNT=	PrismLauncher
@@ -25,7 +27,6 @@ GH_PROJECT=	${GH_ACCOUNT}
 GH_TUPLE=	gulrak:filesystem:2fc4b463:filesystem/libraries/filesystem \
 		PrismLauncher:libnbtplusplus:23b95512:libnbtplusplus/libraries/libnbtplusplus
 USE_GL=		opengl
-USE_JAVA=	yes
 USE_KDE=	ecm:build
 USE_QT=		5compat base networkauth
 

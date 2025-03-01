@@ -1,5 +1,6 @@
 PORTNAME=	libvirt
-DISTVERSION=	10.9.0
+DISTVERSION=	11.0.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://libvirt.org/sources/ \
 		ftp://libvirt.org/libvirt/
@@ -11,8 +12,7 @@ WWW=		https://libvirt.org/
 LICENSE=	LGPL3
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
-		libgnutls.so:security/gnutls \
-		libxml2.so:textproc/libxml2
+		libgnutls.so:security/gnutls
 BUILD_DEPENDS=	dnsmasq:dns/dnsmasq \
 		${LOCALBASE}/bin/grep:textproc/gnugrep \
 		gsed:textproc/gsed \
@@ -132,14 +132,14 @@ LDFLAGS+=	-L${LOCALBASE}/lib -fstack-protector
 
 USES=		gnome charsetfix compiler:c++0x cpe gettext-runtime gmake \
 	        meson pathfix perl5 python:build pkgconfig shebangfix tar:xz
-USE_GNOME=	glib20
+USE_GNOME=	glib20 libxml2
 USE_RC_SUBR=	libvirtd virtlogd
 CPE_VENDOR=	redhat
 USE_PERL5=	build
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
-SHLIB_VER=	0.10009.0
+SHLIB_VER=	0.11000.0
 PLIST_SUB+=	SHLIB_VER=${SHLIB_VER}
 PORTDOCS=	*
 #SHEBANG_FILES=	src/keycodemapdb/tools/keymap-gen

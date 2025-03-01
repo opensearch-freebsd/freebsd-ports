@@ -1,7 +1,7 @@
 PORTNAME=	libdatadog
 PORTVERSION=	12.0.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -10,6 +10,8 @@ WWW=		https://github.com/DataDog/libdatadog
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	error: could not compile `datadog-sidecar` (lib) due to 2 previous errors
 
 USES=		cargo llvm
 

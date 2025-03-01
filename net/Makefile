@@ -10,10 +10,10 @@
     SUBDIR += addrwatch
     SUBDIR += afpfs-ng
     SUBDIR += aget
+    SUBDIR += akhq
     SUBDIR += akonadi-calendar
     SUBDIR += akonadi-contacts
     SUBDIR += akonadi-mime
-    SUBDIR += akonadi-notes
     SUBDIR += akonadi-search
     SUBDIR += alligator
     SUBDIR += aluminum
@@ -35,6 +35,7 @@
     SUBDIR += asterisk-g72x
     SUBDIR += asterisk18
     SUBDIR += asterisk20
+    SUBDIR += asterisk22
     SUBDIR += astron
     SUBDIR += avahi
     SUBDIR += avahi-app
@@ -57,6 +58,7 @@
     SUBDIR += bindtest
     SUBDIR += binkd
     SUBDIR += bird2
+    SUBDIR += bird3
     SUBDIR += bittwist
     SUBDIR += bmon
     SUBDIR += boinc-client
@@ -130,7 +132,6 @@
     SUBDIR += dpdk-20.11
     SUBDIR += dpinger
     SUBDIR += drawterm
-    SUBDIR += drive
     SUBDIR += dropbox-api-command
     SUBDIR += dropbox-uploader
     SUBDIR += dshell
@@ -181,6 +182,7 @@
     SUBDIR += fsplib
     SUBDIR += gamenetworkingsockets
     SUBDIR += gdrive
+    SUBDIR += gemget
     SUBDIR += gemserv
     SUBDIR += geoclue
     SUBDIR += geocode-glib
@@ -316,6 +318,7 @@
     SUBDIR += kdenetwork
     SUBDIR += kdenetwork-filesharing
     SUBDIR += kea
+    SUBDIR += kea-devel
     SUBDIR += keama
     SUBDIR += keycloak
     SUBDIR += kf5-kcalendarcore
@@ -416,13 +419,6 @@
     SUBDIR += libpcapnav
     SUBDIR += libpfctl
     SUBDIR += libproxy
-    SUBDIR += libproxy-duktape
-    SUBDIR += libproxy-gnome3
-    SUBDIR += libproxy-kde
-    SUBDIR += libproxy-pacrunner
-    SUBDIR += libproxy-perl
-    SUBDIR += libproxy-python
-    SUBDIR += libproxy-webkit3
     SUBDIR += librdkafka
     SUBDIR += librespeed-cli
     SUBDIR += librespeed-go
@@ -453,6 +449,8 @@
     SUBDIR += linux-rl9-avahi-libs
     SUBDIR += linux-rl9-libproxy
     SUBDIR += linux-rl9-openldap
+    SUBDIR += linux-rl9-sdl2_net
+    SUBDIR += linux-rl9-sdl_net
     SUBDIR += linux-rl9-tcp_wrappers-libs
     SUBDIR += liveMedia
     SUBDIR += lla
@@ -478,6 +476,7 @@
     SUBDIR += micro_inetd
     SUBDIR += micro_proxy
     SUBDIR += microsocks
+    SUBDIR += mimetreeparser
     SUBDIR += minidlna
     SUBDIR += minissdpd
     SUBDIR += miniupnpc
@@ -500,6 +499,7 @@
     SUBDIR += mrouted
     SUBDIR += mrtparse
     SUBDIR += msend
+    SUBDIR += msgraph
     SUBDIR += msoak
     SUBDIR += mtr
     SUBDIR += multicat
@@ -891,6 +891,7 @@
     SUBDIR += p5-Socket-Class
     SUBDIR += p5-Socket-GetAddrInfo
     SUBDIR += p5-Socket-Multicast6
+    SUBDIR += p5-Socket-Netlink
     SUBDIR += p5-Socket6
     SUBDIR += p5-Socks
     SUBDIR += p5-Sort-Key-IPv4
@@ -1106,6 +1107,7 @@
     SUBDIR += py-pamqp
     SUBDIR += py-pcapy
     SUBDIR += py-pcapy-ng
+    SUBDIR += py-pook
     SUBDIR += py-port-for
     SUBDIR += py-portend
     SUBDIR += py-pychromecast
@@ -1191,6 +1193,7 @@
     SUBDIR += py-url-normalize
     SUBDIR += py-urlextract
     SUBDIR += py-urllib3
+    SUBDIR += py-urllib3-future
     SUBDIR += py-whois
     SUBDIR += py-wmi-query
     SUBDIR += py-wsdd
@@ -1205,6 +1208,7 @@
     SUBDIR += qt5-network
     SUBDIR += qt5-networkauth
     SUBDIR += qt6-coap
+    SUBDIR += qt6-mqtt
     SUBDIR += qt6-networkauth
     SUBDIR += quagga
     SUBDIR += quiche
@@ -1262,6 +1266,7 @@
     SUBDIR += rubygem-activestorage70
     SUBDIR += rubygem-activestorage71
     SUBDIR += rubygem-activestorage72
+    SUBDIR += rubygem-activestorage80
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp
@@ -1288,6 +1293,7 @@
     SUBDIR += rubygem-epp-client-secdns
     SUBDIR += rubygem-epp-client-smallregistry
     SUBDIR += rubygem-fog-aliyun
+    SUBDIR += rubygem-fog-aliyun-gitlab
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
     SUBDIR += rubygem-fog-aws328
@@ -1353,7 +1359,6 @@
     SUBDIR += rubygem-google-cloud-spanner-v1
     SUBDIR += rubygem-google-cloud-storage
     SUBDIR += rubygem-google-cloud-storage-gitlab
-    SUBDIR += rubygem-google-cloud-storage145
     SUBDIR += rubygem-google-cloud-storage_transfer
     SUBDIR += rubygem-google-cloud-storage_transfer-gitlab
     SUBDIR += rubygem-google-cloud-storage_transfer-v1
@@ -1364,6 +1369,7 @@
     SUBDIR += rubygem-google-cloud-trace-v2
     SUBDIR += rubygem-grpc
     SUBDIR += rubygem-grpc-tools
+    SUBDIR += rubygem-grpc_reflection
     SUBDIR += rubygem-hangouts-chat
     SUBDIR += rubygem-http-parser
     SUBDIR += rubygem-http_parser.rb
@@ -1397,7 +1403,6 @@
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octokit-gitlab
     SUBDIR += rubygem-octokit4
-    SUBDIR += rubygem-octokit8
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
     SUBDIR += rubygem-omniauth-auth0-gitlab
@@ -1465,6 +1470,7 @@
     SUBDIR += rubygem-twitter4r
     SUBDIR += rubygem-u2f
     SUBDIR += rubygem-uri
+    SUBDIR += rubygem-uri-gitlab
     SUBDIR += rubygem-uri-redis
     SUBDIR += rubygem-uri_template
     SUBDIR += rubygem-whois
@@ -1479,6 +1485,7 @@
     SUBDIR += sakisafecli
     SUBDIR += samba416
     SUBDIR += samba419
+    SUBDIR += samba420
     SUBDIR += samplicator
     SUBDIR += savvycan
     SUBDIR += sbm
@@ -1620,6 +1627,7 @@
     SUBDIR += udt
     SUBDIR += uget
     SUBDIR += uhttpmock
+    SUBDIR += uhttpmock0
     SUBDIR += ulxmlrpcpp
     SUBDIR += unfs3
     SUBDIR += unison
@@ -1652,6 +1660,7 @@
     SUBDIR += waypipe
     SUBDIR += wayvnc
     SUBDIR += webalizer-geodb
+    SUBDIR += wgcf
     SUBDIR += whois
     SUBDIR += widentd
     SUBDIR += wifi-firmware-ath10k-kmod
@@ -1660,6 +1669,7 @@
     SUBDIR += wifi-firmware-iwlwifi-kmod
     SUBDIR += wifi-firmware-kmod
     SUBDIR += wifi-firmware-mt76-kmod
+    SUBDIR += wifi-firmware-mtw-kmod
     SUBDIR += wifi-firmware-rtw88-kmod
     SUBDIR += wifi-firmware-rtw89-kmod
     SUBDIR += wifibox

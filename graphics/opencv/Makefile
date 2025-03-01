@@ -1,6 +1,6 @@
 PORTNAME=	opencv
 DISTVERSION=	4.9.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics
 
 MAINTAINER=	desktop@FreeBSD.org
@@ -87,7 +87,7 @@ JAVA_DESC=		Enable Java Support
 JAVA_BUILD_DEPENDS=	ant:devel/apache-ant
 JAVA_CMAKE_BOOL=	BUILD_opencv_java BUILD_opencv_java_bindings_generator BUILD_JAVA
 JAVA_MAKE_ENV=		JAVACMD=${JAVA}
-JAVA_USE=		JAVA=yes
+JAVA_USES=		java
 
 LTO_DESC=		Enables Link Time Optimizations
 LTO_CMAKE_BOOL=		ENABLE_THIN_LTO

@@ -1,6 +1,7 @@
 PORTNAME=	rdkit
 DISTVERSIONPREFIX=	Release_
 DISTVERSION=	2024_09_4
+PORTREVISION=	1
 CATEGORIES=	science
 MASTER_SITES=	LOCAL/yuri/:font # unstable, changing font file: https://fonts.google.com/download?family=Comic%20Neue&dummy=/:font
 DISTFILES=	ComicNeue-Regular.ttf:font
@@ -17,6 +18,7 @@ LICENSE_FILE=	${WRKSRC}/license.txt
 
 BROKEN_FreeBSD_15_aarch64=	clang-17 crashes, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=272652
 BROKEN_FreeBSD_15_amd64=	clang-17 crashes, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=272652
+BROKEN_FreeBSD_15_i386=		clang-17 crashes, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=272652
 
 BUILD_DEPENDS=	catch>0:devel/catch \
 		flex:textproc/flex \

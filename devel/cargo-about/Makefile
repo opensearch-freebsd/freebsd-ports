@@ -1,11 +1,12 @@
 PORTNAME=	cargo-about
-DISTVERSION=	0.6.5
-PORTREVISION=	1
+DISTVERSION=	0.6.6
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Rust: Cargo plugin to generate list of all licenses for a crate
-WWW=		http://embark.rs
+WWW=		http://embark.rs \
+		https://github.com/EmbarkStudios/cargo-about
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
@@ -290,5 +291,12 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		zstd-sys-2.0.13+zstd.1.5.6
 
 PLIST_FILES=	bin/${PORTNAME}
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc
+LIB_DEPENDS+=	libatomic.so:lang/gcc${GCC_DEFAULT}
+LDFLAGS+=	-L/usr/local/lib/gcc${GCC_DEFAULT} -latomic
+.endif
 
 .include <bsd.port.mk>

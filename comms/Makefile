@@ -18,7 +18,6 @@
     SUBDIR += bpl+
     SUBDIR += chirp
     SUBDIR += chu
-    SUBDIR += concordance
     SUBDIR += conserver-com
     SUBDIR += cqrlog
     SUBDIR += cubicsdr
@@ -48,6 +47,7 @@
     SUBDIR += flwrap
     SUBDIR += freedv
     SUBDIR += gammu
+    SUBDIR += gensio
     SUBDIR += gkermit
     SUBDIR += gnocky
     SUBDIR += gnokii
@@ -70,7 +70,6 @@
     SUBDIR += java-simple-serial-connector
     SUBDIR += kermit
     SUBDIR += klog
-    SUBDIR += libconcord
     SUBDIR += libdc
     SUBDIR += libfap
     SUBDIR += libfec
@@ -133,6 +132,7 @@
     SUBDIR += picocom
     SUBDIR += pr
     SUBDIR += predict
+    SUBDIR += py-ModbusTCP
     SUBDIR += py-adafruit-ampy
     SUBDIR += py-elelabs-zigbee-ezsp-utility
     SUBDIR += py-esptool
@@ -150,6 +150,7 @@
     SUBDIR += py-pyocd-pemicro
     SUBDIR += py-pyserial
     SUBDIR += py-pyserial-asyncio
+    SUBDIR += py-sdm_modbus
     SUBDIR += py-spsdk
     SUBDIR += py-streamdeck
     SUBDIR += py-xmodem

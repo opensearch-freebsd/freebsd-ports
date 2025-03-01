@@ -290,6 +290,7 @@
     SUBDIR += opensmtpd-extras-table-sqlite
     SUBDIR += opensmtpd-filter-rspamd
     SUBDIR += opensmtpd-filter-senderscore
+    SUBDIR += opensmtpd-table-sqlite
     SUBDIR += osbf-lua
     SUBDIR += ovs
     SUBDIR += p5-CGP-CLI
@@ -503,7 +504,6 @@
     SUBDIR += procmail
     SUBDIR += procmail-bgrb
     SUBDIR += proxsmtp
-    SUBDIR += py-Products.SecureMailHost
     SUBDIR += py-afew
     SUBDIR += py-aiosmtpd
     SUBDIR += py-alot
@@ -564,7 +564,6 @@
     SUBDIR += qmhandle
     SUBDIR += qpopper
     SUBDIR += qsf
-    SUBDIR += queue-fix
     SUBDIR += queue-repair
     SUBDIR += rainloop
     SUBDIR += ratelimit-policyd
@@ -601,6 +600,7 @@
     SUBDIR += rubygem-actionmailbox70
     SUBDIR += rubygem-actionmailbox71
     SUBDIR += rubygem-actionmailbox72
+    SUBDIR += rubygem-actionmailbox80
     SUBDIR += rubygem-actionmailer4
     SUBDIR += rubygem-actionmailer5
     SUBDIR += rubygem-actionmailer50
@@ -610,6 +610,7 @@
     SUBDIR += rubygem-actionmailer70
     SUBDIR += rubygem-actionmailer71
     SUBDIR += rubygem-actionmailer72
+    SUBDIR += rubygem-actionmailer80
     SUBDIR += rubygem-email_reply_parser
     SUBDIR += rubygem-email_reply_parser-discourse
     SUBDIR += rubygem-email_reply_trimmer
@@ -639,6 +640,7 @@
     SUBDIR += rubygem-roadie-rails-rails4
     SUBDIR += rubygem-roadie-rails-rails52
     SUBDIR += rubygem-roadie-rails-rails61
+    SUBDIR += rubygem-roadie-rails-rails72
     SUBDIR += rubygem-roadie3
     SUBDIR += rubygem-ruby-qmail
     SUBDIR += rubygem-valid_email

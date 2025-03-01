@@ -99,15 +99,12 @@
     SUBDIR += bareos-client
     SUBDIR += bareos-server
     SUBDIR += bareos-traymonitor
-    SUBDIR += bareos20-client
-    SUBDIR += bareos20-server
-    SUBDIR += bareos20-traymonitor
-    SUBDIR += bareos21-client
-    SUBDIR += bareos21-server
-    SUBDIR += bareos21-traymonitor
     SUBDIR += bareos22-client
     SUBDIR += bareos22-server
     SUBDIR += bareos22-traymonitor
+    SUBDIR += bareos23-client
+    SUBDIR += bareos23-server
+    SUBDIR += bareos23-traymonitor
     SUBDIR += barrier
     SUBDIR += bashtop
     SUBDIR += bastille
@@ -145,6 +142,7 @@
     SUBDIR += bsdhwmon
     SUBDIR += bsdinfo
     SUBDIR += bsdisks
+    SUBDIR += bsdsensors
     SUBDIR += bsdstats
     SUBDIR += bstack
     SUBDIR += btop
@@ -187,10 +185,12 @@
     SUBDIR += cfengine-masterfiles322
     SUBDIR += cfengine-masterfiles323
     SUBDIR += cfengine-masterfiles324
+    SUBDIR += cfengine-masterfiles325
     SUBDIR += cfengine321
     SUBDIR += cfengine322
     SUBDIR += cfengine323
     SUBDIR += cfengine324
+    SUBDIR += cfengine325
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -236,6 +236,7 @@
     SUBDIR += coreos-ct
     SUBDIR += coreutils
     SUBDIR += cpdup
+    SUBDIR += cpdup-FreeBSD
     SUBDIR += cpu-microcode
     SUBDIR += cpu-microcode-amd
     SUBDIR += cpu-microcode-intel
@@ -402,7 +403,6 @@
     SUBDIR += flog
     SUBDIR += flowgger
     SUBDIR += fluent-bit
-    SUBDIR += fluxengine
     SUBDIR += fonteditfs
     SUBDIR += foremost
     SUBDIR += fortunelock
@@ -586,6 +586,8 @@
     SUBDIR += kiconvtool
     SUBDIR += kldfind
     SUBDIR += kldpatch
+    SUBDIR += kleene-cli
+    SUBDIR += kleene-daemon
     SUBDIR += kopia
     SUBDIR += kops
     SUBDIR += kpmcore
@@ -716,6 +718,7 @@
     SUBDIR += modman
     SUBDIR += modules
     SUBDIR += mog
+    SUBDIR += mongodb_exporter
     SUBDIR += monit
     SUBDIR += monitord
     SUBDIR += monitorix
@@ -890,7 +893,6 @@
     SUBDIR += parkverbot
     SUBDIR += pass-coffin
     SUBDIR += pass-otp
-    SUBDIR += pass-secrets
     SUBDIR += pass-update
     SUBDIR += password-store
     SUBDIR += passwordsafe
@@ -900,7 +902,6 @@
     SUBDIR += pc-networkmanager
     SUBDIR += pcapfix
     SUBDIR += pciutils
-    SUBDIR += pcns
     SUBDIR += pcpustat
     SUBDIR += pdixtract
     SUBDIR += pdsh
@@ -938,19 +939,7 @@
     SUBDIR += pies
     SUBDIR += pipemeter
     SUBDIR += plasma-pass
-    SUBDIR += plasma5-discover
-    SUBDIR += plasma5-drkonqi
-    SUBDIR += plasma5-kde-cli-tools
-    SUBDIR += plasma5-kinfocenter
-    SUBDIR += plasma5-kmenuedit
-    SUBDIR += plasma5-ksysguard
-    SUBDIR += plasma5-ksystemstats
     SUBDIR += plasma5-libksysguard
-    SUBDIR += plasma5-plasma-disks
-    SUBDIR += plasma5-plasma-systemmonitor
-    SUBDIR += plasma5-polkit-kde-agent-1
-    SUBDIR += plasma5-powerdevil
-    SUBDIR += plasma5-systemsettings
     SUBDIR += plasma6-discover
     SUBDIR += plasma6-drkonqi
     SUBDIR += plasma6-kde-cli-tools
@@ -968,6 +957,7 @@
     SUBDIR += pmt
     SUBDIR += pnscan
     SUBDIR += podman
+    SUBDIR += podman-compose
     SUBDIR += podman-suite
     SUBDIR += polkit
     SUBDIR += polkit-gnome
@@ -1064,7 +1054,6 @@
     SUBDIR += py-pyinfra
     SUBDIR += py-python-bareos
     SUBDIR += py-python-consul
-    SUBDIR += py-python-consul2
     SUBDIR += py-python-crontab
     SUBDIR += py-python-nomad
     SUBDIR += py-pytsk
@@ -1088,7 +1077,6 @@
     SUBDIR += py-upt-pypi
     SUBDIR += py-upt-rubygems
     SUBDIR += py-uptime
-    SUBDIR += py-zdaemon
     SUBDIR += qchroot
     SUBDIR += qdirstat
     SUBDIR += qflipper
@@ -1164,6 +1152,8 @@
     SUBDIR += rubygem-chef-telemetry
     SUBDIR += rubygem-chef-utils
     SUBDIR += rubygem-chef-vault
+    SUBDIR += rubygem-chef-winrm
+    SUBDIR += rubygem-chef-winrm-elevated
     SUBDIR += rubygem-chef-zero
     SUBDIR += rubygem-choria-mcorpc-support
     SUBDIR += rubygem-facter
@@ -1285,7 +1275,6 @@
     SUBDIR += setcdboot
     SUBDIR += setsid
     SUBDIR += sg3_utils
-    SUBDIR += shim
     SUBDIR += shlock
     SUBDIR += shmcat
     SUBDIR += shuf
@@ -1294,6 +1283,7 @@
     SUBDIR += signon-plugin-oauth2
     SUBDIR += signon-ui
     SUBDIR += signond
+    SUBDIR += simplesnap
     SUBDIR += sispmctl
     SUBDIR += skopeo
     SUBDIR += slack
@@ -1360,6 +1350,7 @@
     SUBDIR += tcplist
     SUBDIR += tdir
     SUBDIR += tealdeer
+    SUBDIR += tempo
     SUBDIR += tenshi
     SUBDIR += tere
     SUBDIR += terraform
@@ -1492,6 +1483,8 @@
     SUBDIR += upower
     SUBDIR += upsdaemon
     SUBDIR += uptimed
+    SUBDIR += usacloud
+    SUBDIR += usacloud-core
     SUBDIR += usb_modeswitch
     SUBDIR += usbhid-dump
     SUBDIR += usbtop
@@ -1519,6 +1512,7 @@
     SUBDIR += vivid
     SUBDIR += vm-bhyve
     SUBDIR += vm-bhyve-devel
+    SUBDIR += vm-bhyve-zcomp
     SUBDIR += vmdktool
     SUBDIR += vmstated
     SUBDIR += vmtouch

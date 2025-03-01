@@ -294,6 +294,8 @@ include/wine/windows/d3d8caps.h
 include/wine/windows/d3d8types.h
 include/wine/windows/d3d9.h
 include/wine/windows/d3d9caps.h
+include/wine/windows/d3d9on12.h
+include/wine/windows/d3d9on12.idl
 include/wine/windows/d3d9types.h
 include/wine/windows/d3dcaps.h
 include/wine/windows/d3dcommon.h
@@ -1637,6 +1639,7 @@ lib/wine/%%WINEARCH%%-unix/winedmo.so
 %%OSS%%lib/wine/%%WINEARCH%%-unix/wineoss.so
 lib/wine/%%WINEARCH%%-unix/wineps.so
 lib/wine/%%WINEARCH%%-unix/winevulkan.so
+%%WAYLAND%%lib/wine/%%WINEARCH%%-unix/winewayland.so
 %%X11%%lib/wine/%%WINEARCH%%-unix/winex11.so
 lib/wine/%%WINEARCH%%-unix/winspool.so
 lib/wine/%%WINEARCH%%-unix/ws2_32.so
@@ -2557,6 +2560,7 @@ lib/wine/%%WINEARCH%%-windows/windows.security.credentials.ui.userconsentverifie
 lib/wine/%%WINEARCH%%-windows/windows.storage.applicationdata.dll
 lib/wine/%%WINEARCH%%-windows/windows.system.profile.systemmanufacturers.dll
 lib/wine/%%WINEARCH%%-windows/windows.ui.dll
+lib/wine/%%WINEARCH%%-windows/windows.ui.xaml.dll
 lib/wine/%%WINEARCH%%-windows/windows.web.dll
 lib/wine/%%WINEARCH%%-windows/windowscodecs.dll
 lib/wine/%%WINEARCH%%-windows/windowscodecsext.dll
@@ -2584,6 +2588,7 @@ lib/wine/%%WINEARCH%%-windows/wineps.drv
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/wineps16.drv16
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/winevdm.exe
 lib/wine/%%WINEARCH%%-windows/winevulkan.dll
+%%WAYLAND%%lib/wine/%%WINEARCH%%-windows/winewayland.drv
 %%X11%%lib/wine/%%WINEARCH%%-windows/winex11.drv
 %%X11%%lib/wine/%%WINEARCH%%-windows/winexinput.sys
 %%WINE32%%lib/wine/%%WINEARCH%%-windows/wing.dll16

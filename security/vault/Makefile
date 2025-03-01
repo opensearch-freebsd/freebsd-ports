@@ -1,6 +1,7 @@
 PORTNAME=	vault
-DISTVERSION=	1.18.3
 DISTVERSIONPREFIX=	v
+DISTVERSION=	1.18.4
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://raw.githubusercontent.com/hashicorp/vault/${DISTVERSIONFULL}/ \
 		LOCAL/bofh/security/${PORTNAME}/:web_ui
@@ -15,6 +16,9 @@ DISTFILES=	go.mod \
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Tool for securely accessing secrets
 WWW=		https://vaultproject.io/
+
+NOT_FOR_ARCHS=	armv7 i386
+NOT_FOR_ARCHS_REASON=	fatal error: out of memory
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -43,7 +47,7 @@ GROUPS=		vault
 
 PLIST_FILES=	bin/${PORTNAME}
 
-GITID=	7ae4eca5403bf574f142cd8f987b8d83bafcd1de
+GITID=	503be623a3697e8c10c254dc87d26492c46753e1
 
 .include <bsd.port.pre.mk>
 

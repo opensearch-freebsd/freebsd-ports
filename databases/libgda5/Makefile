@@ -92,8 +92,8 @@ CONFIGURE_ARGS+=	--without-mdb
 .endif
 
 .if ${LIBGDA5_SLAVE}==jdbc
-USE_JAVA=		yes
-JAVA_VENDOR=		bsdjava openjdk
+USES+=			java
+JAVA_VENDOR=		openjdk
 CFLAGS+=		-I${JAVA_HOME}/include -I${JAVA_HOME}/include/freebsd
 .else
 CONFIGURE_ARGS+=	--without-java
@@ -115,7 +115,7 @@ post-patch:
 		${WRKSRC}/providers/bdb/gda-bdb-provider.c \
 		${WRKSRC}/providers/bdb/gda-bdb-test.c
 .if ${LIBGDA5_SLAVE} == jdbc
-	@${REINPLACE_CMD} -e 's|lib/amd64|lib/${ARCH:S/powerpc64/ppc64/}|g' \
+	@${REINPLACE_CMD} -e 's|lib/amd64|lib/${ARCH:S/powerpc/ppc/}|g' \
 		${WRKSRC}/getsp.java
 .endif
 .if ${LIBGDA5_SLAVE}!="no"

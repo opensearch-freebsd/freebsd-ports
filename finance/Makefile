@@ -19,7 +19,9 @@
     SUBDIR += alkimia
     SUBDIR += aqbanking
     SUBDIR += beancount
+    SUBDIR += beangulp
     SUBDIR += beanie
+    SUBDIR += beanquery
     SUBDIR += chiapos
     SUBDIR += electrs
     SUBDIR += electrum
@@ -55,6 +57,7 @@
     SUBDIR += odoo14
     SUBDIR += odoo15
     SUBDIR += odoo16
+    SUBDIR += odoo17
     SUBDIR += ord
     SUBDIR += p5-Business-CreditCard
     SUBDIR += p5-Business-MaxMind-CreditCardFraudDetection
